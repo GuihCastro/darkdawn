@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
 import style from './page.module.scss';
 import CardSection from '@/components/CardSection/CardSection';
 
@@ -65,7 +64,7 @@ export default function Home() {
     <div className={style.container}>
       <main>
         <header>
-          <Image src="/assets/logo.png" alt="DarkDawn logo" />
+          <img src="/assets/logo.png" alt="DarkDawn logo" />
         </header>
         <h1>The sun will shine again for us</h1>
       </main>
@@ -83,7 +82,7 @@ export default function Home() {
             <div className={style.title}>
               <h2>Darkdawn</h2>
               <hr />
-              <p>An art project by Mari Livraes and Mike Azevedo</p>
+              <h3>An art project by Mari Livraes and Mike Azevedo</h3>
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat natus quasi iure accusamus. Nisi voluptate magnam fugiat neque nobis quo nihil ipsum fugit facilis ut. Itaque dolorem quos sapiente harum!
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quidem neque nisi voluptatibus vitae deserunt, tempore blanditiis mollitia in quia ex nulla cum porro eum sed aliquid quis et repellat?
@@ -101,7 +100,7 @@ export default function Home() {
         className={`${style.factions} ${isFactionsVisible ? style.visible : ''}`}
       >
         <div className={isFactionsVisible ? style.visible : ''}>
-          <Image className={style.guardians} src="/assets/guardians.png" alt="Guardians of the Sun logo" />
+          <img className={style.guardians} src="/assets/guardians.png" alt="Guardians of the Sun logo" />
           <div className={style.info}>
             <h3>Guardians of The Sun</h3>
             <hr />
@@ -111,7 +110,7 @@ export default function Home() {
           </div>
         </div>
         <div className={isFactionsVisible ? style.visible : ''}>
-          <Image className={style.eclipse} src="/assets/eclipse_corp.png" alt="Eclipse Corp. logo" />
+          <img className={style.eclipse} src="/assets/eclipse_corp.png" alt="Eclipse Corp. logo" />
           <div className={style.info}>
             <h3>Eclipse Corp.</h3>
             <hr />

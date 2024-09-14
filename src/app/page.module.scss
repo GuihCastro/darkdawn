@@ -213,40 +213,14 @@
 
     .abstract {
         width: 100%;
+        max-width: 1920px;
         height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 5rem 15rem;
+        padding: 5rem 15rem 15rem;
         gap: 3rem;
-
-        .title {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 5rem;
-
-            h2 {
-                font-size: 3rem;
-                font-weight: 700;
-                letter-spacing: .3rem;
-                text-transform: uppercase;
-                color: $yellow;
-            }
-
-            hr {
-                width: 100%;
-                border-color: $gold;
-                margin: 0 0 1rem;
-            }
-
-            p {
-                color: $secondary;
-            }
-        }
 
         .info {
             position: relative;
@@ -303,12 +277,46 @@
                     transform: translateX(0); // Move para a posição final
                     opacity: 1;
                 }
+
+                .title {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 5rem;
+        
+                    h2 {
+                        font-size: 3rem;
+                        font-weight: 700;
+                        letter-spacing: .3rem;
+                        text-transform: uppercase;
+                        color: $yellow;
+                    }
+        
+                    hr {
+                        width: 100%;
+                        border-color: $gold;
+                        margin: 0 0 1rem;
+                    }
+        
+                    h3 {
+                        color: $secondary;
+                        font-weight: 600;
+                    }
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                }
             }
         }
     }
 
     .factions {
         width: 100%;
+        max-width: 1920px;
         height: 90vh;
         background: #ECDFCC30;
         color: $tertiary;
@@ -414,11 +422,11 @@
         }
     }
 
-    .cards {
-        width: 100%;
-        min-height: 100vh;
-        padding: 10rem;
-    }
+    // .cards {
+    //     width: 100%;
+    //     min-height: 100vh;
+    //     padding: 10rem;
+    // }
 
     // section {
     //     width: 100%;
