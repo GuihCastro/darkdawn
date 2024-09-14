@@ -10,8 +10,6 @@ export default function Home() {
   const abstractRef = useRef<HTMLDivElement>(null);
   const factionsRef = useRef<HTMLDivElement>(null);
 
-  const artists = ["Mari Livraes", "Mike Azevedo"];
-
   // Hook para animar a seção abstract
   useEffect(() => {
     const observer = new IntersectionObserver(
