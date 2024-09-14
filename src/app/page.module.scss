@@ -1,0 +1,431 @@
+@import '../app/styles/variables';
+
+@keyframes text-flicker-in-glow {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    10.1% {
+        opacity: 1;
+        text-shadow: none;
+    }
+
+    10.2% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    20% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    20.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+    }
+
+    20.6% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    30% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    30.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+
+    30.5% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+
+    30.6% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    45% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    45.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+
+    55% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+    }
+
+    55.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    57% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    57.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+    }
+
+    60% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35);
+    }
+
+    60.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    65% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    65.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+
+    75% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+
+    75.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    77% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    77.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+
+    85% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+
+    85.1% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    86% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    86.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    main {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url('/assets/bg-placeholder.png') center/cover no-repeat;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            /* Usa a mesma imagem do background */
+            filter: brightness(30%);
+            /* Reduz o brilho (simulando opacidade) */
+            z-index: 0;
+            /* Fica atrás do conteúdo */
+        }
+
+        h1 {
+            animation: text-flicker-in-glow 4s linear both;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            max-width: 1920px;
+            padding: 1rem 2rem;
+            z-index: 999;
+
+            img {
+                width: 10%;
+            }
+        }
+
+        h1 {
+            position: absolute;
+            z-index: 1;
+            text-transform: uppercase;
+            font-size: 5rem;
+        }
+    }
+
+    .abstract {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem 15rem;
+        gap: 3rem;
+
+        .title {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5rem;
+
+            h2 {
+                font-size: 3rem;
+                font-weight: 700;
+                letter-spacing: .3rem;
+                text-transform: uppercase;
+                color: $yellow;
+            }
+
+            hr {
+                width: 100%;
+                border-color: $gold;
+                margin: 0 0 1rem;
+            }
+
+            p {
+                color: $secondary;
+            }
+        }
+
+        .info {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .characters {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 60rem;
+                display: flex;
+                justify-self: flex-start;
+                align-items: center;
+
+                opacity: 0;
+                transform: translateX(-15rem); // Começa fora da tela, do lado esquerdo
+                transition: transform 1s ease-in-out 0.5s, opacity 1s ease-in-out 0.5s;
+                will-change: opacity, transform;
+
+                &.visible {
+                    transform: translateX(0); // Move para a posição final
+                    opacity: 1;
+                }
+
+                img {
+                    height: 100%;
+                }
+
+                .man {
+                    filter: drop-shadow(15px 5px 10px #000000);
+                }
+
+                .woman {
+                    position: absolute;
+                    left: 20rem;
+                    bottom: 5rem;
+                    height: 85%;
+                    z-index: -1;
+                }
+            }
+
+            .text {
+                width: 55%;
+
+                opacity: 0;
+                transform: translateX(15rem); // Começa fora da tela, do lado direito
+                transition: transform 1s ease-in-out 0.5s, opacity 1s ease-in-out 0.5s;
+                will-change: opacity, transform;
+
+                &.visible {
+                    transform: translateX(0); // Move para a posição final
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .factions {
+        width: 100%;
+        height: 90vh;
+        background: #ECDFCC30;
+        color: $tertiary;
+        display: flex;
+
+        opacity: 0;
+        transform: translateY(50px); // Para que a seção inteira tenha um leve movimento para cima
+        transition: opacity 1s ease, transform 1s ease;
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        div {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            opacity: 0;
+            transform: scale(0.5); // Inicia menor (do fundo)
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+
+            &.visible {
+                opacity: 1;
+                transform: scale(1); // Volta ao tamanho original
+                transition: background .3s, position .5s, transform .3s, opacity .2s;
+
+                &:hover {
+                    position: relative;
+                    background: $foreground;
+
+                    &:first-child {
+                        box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.75);
+                    }
+
+                    &:last-child {
+                        box-shadow: -5px 0px 5px 0px rgba(0, 0, 0, 0.75);
+                    }
+
+                    img {
+                        position: absolute;
+                        opacity: .2;
+                        transform: scale(.8);
+                        z-index: -1;
+
+                        &.guardians {
+                            top: 0;
+                            left: 0;
+                        }
+
+                        &.eclipse {
+                            top: 0;
+                            right: 0;
+                        }
+                    }
+
+                    .info {
+                        opacity: 1;
+                        transform: scale(1);
+                        // filter: drop-shadow(5px 5px 10px #000000);
+                    }
+                }
+            }
+
+            // background: $foreground;
+            img {
+                height: 70%;
+                opacity: 1;
+            }
+
+            .info {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                // height: 100%;
+                color: $background;
+                opacity: 0;
+
+                h3 {
+                    text-transform: uppercase;
+                    color: $yellow;
+                    font-size: 3rem;
+                    font-weight: 800;
+                    text-shadow: 1px 1px 2px #000000;
+                }
+
+                hr {
+                    width: 80%;
+                    border-color: $gold;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .cards {
+        width: 100%;
+        min-height: 100vh;
+        padding: 10rem;
+    }
+
+    // section {
+    //     width: 100%;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     padding: 5rem;
+    //     // border-top: 1rem solid $foreground;
+    // }
+}

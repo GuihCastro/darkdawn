@@ -1,101 +1,127 @@
-import Image from "next/image";
+"use client";
+
+import { useEffect, useRef, useState } from 'react';
+import style from './page.module.scss';
+import CardSection from '@/components/CardSection/CardSection';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [isAbstractVisible, setIsAbstractVisible] = useState(false);
+  const [isFactionsVisible, setIsFactionsVisible] = useState(false);
+  const abstractRef = useRef<HTMLDivElement>(null);
+  const factionsRef = useRef<HTMLDivElement>(null);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+  const artists = ["Mari Livraes", "Mike Azevedo"];
+
+  // Hook para animar a seção abstract
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsAbstractVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.05,
+      }
+    );
+
+    if (abstractRef.current) {
+      observer.observe(abstractRef.current);
+    }
+
+    return () => {
+      if (abstractRef.current) observer.unobserve(abstractRef.current);
+    };
+  }, []);
+
+  // Hook para animar a seção factions
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsFactionsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.05, // Anima quando 5% da seção está visível
+      }
+    );
+
+    if (factionsRef.current) {
+      observer.observe(factionsRef.current);
+    }
+
+    return () => {
+      if (factionsRef.current) observer.unobserve(factionsRef.current);
+    };
+  }, []);
+
+  return (
+    <div className={style.container}>
+      <main>
+        <header>
+          <img src="/assets/logo.png" alt="DarkDawn logo" />
+        </header>
+        <h1>The sun will shine again for us</h1>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      <section
+        ref={abstractRef}
+        className={`${style.abstract} ${isAbstractVisible ? style.visible : ''}`}
+      >
+        <div className={style.info}>
+          <div className={`${style.characters} ${isAbstractVisible ? style.visible : ''}`}>
+            <img className={style.man} src="/assets/abstract1.png" alt="Worker character" />
+            <img className={style.woman} src="/assets/abstract2.png" alt="Worker character" />
+          </div>
+          <div className={`${style.text} ${isAbstractVisible ? style.visible : ''}`}>
+            <div className={style.title}>
+              <h2>Darkdawn</h2>
+              <hr />
+              <p>An art project by Mari Livraes and Mike Azevedo</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat natus quasi iure accusamus. Nisi voluptate magnam fugiat neque nobis quo nihil ipsum fugit facilis ut. Itaque dolorem quos sapiente harum!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quidem neque nisi voluptatibus vitae deserunt, tempore blanditiis mollitia in quia ex nulla cum porro eum sed aliquid quis et repellat?
+            </p>
+            <br />
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse facilis sed reiciendis consectetur necessitatibus consequuntur temporibus odio officiis nemo error, in obcaecati cum iusto! At natus autem voluptatem earum. Accusamus?
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati necessitatibus voluptatum id praesentium commodi possimus dicta accusantium sed totam, quasi harum autem nobis magni, eum perspiciatis doloremque aliquid! Dolore, velit!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        ref={factionsRef}
+        className={`${style.factions} ${isFactionsVisible ? style.visible : ''}`}
+      >
+        <div className={isFactionsVisible ? style.visible : ''}>
+          <img className={style.guardians} src="/assets/guardians.png" alt="Guardians of the Sun logo" />
+          <div className={style.info}>
+            <h3>Guardians of The Sun</h3>
+            <hr />
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quod dignissimos suscipit numquam dolor hic illo quo ullam, nulla molestias id libero rerum, delectus voluptatem, consequatur exercitationem autem soluta ratione.</p>
+            <br />
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, est molestias! Excepturi at incidunt ea praesentium quaerat magnam, deleniti odit exercitationem laudantium ab porro voluptates ratione sunt doloribus doloremque repudiandae.</p>
+          </div>
+        </div>
+        <div className={isFactionsVisible ? style.visible : ''}>
+          <img className={style.eclipse} src="/assets/eclipse_corp.png" alt="Eclipse Corp. logo" />
+          <div className={style.info}>
+            <h3>Eclipse Corp.</h3>
+            <hr />
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quod dignissimos suscipit numquam dolor hic illo quo ullam, nulla molestias id libero rerum, delectus voluptatem, consequatur exercitationem autem soluta ratione.</p>
+            <br />
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, est molestias! Excepturi at incidunt ea praesentium quaerat magnam, deleniti odit exercitationem laudantium ab porro voluptates ratione sunt doloribus doloremque repudiandae.</p>
+          </div>
+        </div>
+      </section>
+
+      <CardSection />
     </div>
   );
 }

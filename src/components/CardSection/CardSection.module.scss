@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5rem;
+    position: relative;
+    // Adicionando transição para a animação dos cards
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .card {
+        opacity: 0;
+        transform: translateY(30px); // Inicia um pouco abaixo
+        transition: opacity 0.5s ease, transform 0.5s ease;
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0); // Move para a posição final
+        }
+    }
+}
