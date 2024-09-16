@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import style from './page.module.scss';
+import Header from '@/components/Header/Header';
 import CardSection from '@/components/CardSection/CardSection';
 
 export default function Home() {
@@ -63,9 +64,7 @@ export default function Home() {
   return (
     <div className={style.container}>
       <main>
-        <header>
-          <img src="/assets/logo.png" alt="DarkDawn logo" />
-        </header>
+        <Header />
         <h1>The sun will shine again for us</h1>
       </main>
 

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import style from './CardSection.module.scss';
 import Card from '../Card/Card';
@@ -34,34 +35,39 @@ export default function CardSection() {
             backgroundImage: '/assets/card1.jpg',
             title: 'Artistas',
             items: ['Mari Livraes', 'Mike Azevedo'],
+            href: '/artists',
         },
         {
             backgroundImage: '/assets/card2.jpg',
             title: 'Wordbuilding',
             items: ['Sobre o projeto', 'Contos'],
+            href: '/worldbuilding',
         },
         {
             backgroundImage: '/assets/card3.jpg',
             title: 'Galeria',
             items: ['Ilustras', 'Cenários', 'Characters', 'Props', 'Extras'],
+            href: '/gallery',
         },
         {
             backgroundImage: '/assets/card4.jpg',
             title: 'WIPs',
             items: [''],
+            href: '/wips',
         },
-        // Adicione mais cards conforme necessário
     ];
 
     return (
         <div className={`${style.container} ${isVisible ? style.visible : ''}`} ref={sectionRef}>
             {cards.map((card, index) => (
-                <Card
-                    key={index}
-                    backgroundImage={card.backgroundImage}
-                    title={card.title}
-                    items={card.items}
-                />
+                <Link href={card.href} key={index}>
+                    <Card
+                        key={index}
+                        backgroundImage={card.backgroundImage}
+                        title={card.title}
+                        items={card.items}
+                    />
+                </Link>
             ))}
         </div>
     );

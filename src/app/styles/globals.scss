@@ -51,12 +51,12 @@ button {
   }
 }
 
-a {
-  color: $highlight;
-  &:hover {
-    text-decoration: underline;
-  }
-}
+// a {
+//   color: $highlight;
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
 
 @layer utilities {
   .text-balance {
