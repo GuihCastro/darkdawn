@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import "./styles/globals.scss";
 
-const nyghtSerif = localFont({
-  src: "../../public/fonts/nyght-serif/NyghtSerif-Regular.woff",
-  // Outras configurações de fonte, se necessário
-});
+// const nyghtSerif = localFont({
+//   src: "../../public/fonts/nyght-serif/NyghtSerif-Regular.woff",
+//   // Outras configurações de fonte, se necessário
+// });
 
 export const metadata: Metadata = {
   title: "DarkDawn",
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={nyghtSerif.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

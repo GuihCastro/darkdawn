@@ -7,9 +7,37 @@
 /* Definir a fonte personalizada */
 @font-face {
   font-family: 'NyghtSerif';
+  src: url('/public/fonts/nyght-serif/NyghtSerif-Light.woff2') format('woff2'), 
+       url('/public/fonts/nyght-serif/NyghtSerif-Light.woff') format('woff2');
+  font-weight: 300; // light
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NyghtSerif';
   src: url('/public/fonts/nyght-serif/NyghtSerif-Regular.woff2') format('woff2'),
        url('/public/fonts/nyght-serif/NyghtSerif-Regular.woff') format('woff');
-  font-weight: normal;
+  font-weight: 400; // regular
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NyghtSerif';
+  src: url('/public/fonts/nyght-serif/NyghtSerif-Medium.woff2') format('woff2'), 
+       url('/public/fonts/nyght-serif/NyghtSerif-Medium.woff') format('woff2');
+  font-weight: 500; // medium
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NyghtSerif';
+  src: url('/public/fonts/nyght-serif/NyghtSerif-Bold.woff2') format('woff2'), 
+       url('/public/fonts/nyght-serif/NyghtSerif-Bold.woff') format('woff2');
+  font-weight: 600; // bold
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NyghtSerif';
+  src: url('/public/fonts/nyght-serif/NyghtSerif-Dark.woff2') format('woff2'), 
+       url('/public/fonts/nyght-serif/NyghtSerif-Dark.woff') format('woff2');
+  font-weight: 800; // dark
   font-style: normal;
 }
 
@@ -34,7 +62,7 @@ html {
 body {
   color: $foreground;
   background: $background;
-  font-family: NyghtSerif, serif;
+  font-family: 'NyghtSerif', serif;
   font-size: 1.6rem;
   letter-spacing: .2rem;
 }
