@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import style from './page.module.scss';
 import Header from '@/components/Header/Header';
 import CardSection from '@/components/CardSection/CardSection';
+import Footer from '@/components/Footer/Footer';
 
 export default function Home() {
   const [isAbstractVisible, setIsAbstractVisible] = useState(false);
@@ -22,7 +23,7 @@ export default function Home() {
         }
       },
       {
-        threshold: 0.05,
+        threshold: 0.02,
       }
     );
   
@@ -47,7 +48,7 @@ export default function Home() {
         }
       },
       {
-        threshold: 0.05,
+        threshold: 0.1,
       }
     );
   
@@ -121,6 +122,8 @@ export default function Home() {
       </section>
 
       <CardSection />
+
+      {/* <Footer /> */}
     </div>
   );
 }
