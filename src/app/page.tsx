@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import style from './page.module.scss';
 import Header from '@/components/Header/Header';
 import CardSection from '@/components/CardSection/CardSection';
-import Footer from '@/components/Footer/Footer';
+// import Footer from '@/components/Footer/Footer';
 
 export default function Home() {
   const [isAbstractVisible, setIsAbstractVisible] = useState(false);
