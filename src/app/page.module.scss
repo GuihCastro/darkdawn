@@ -334,12 +334,14 @@
         }
 
         div {
-            position: relative;
+            // position: relative;
             width: 100%;
             height: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 5rem .5rem;
 
             opacity: 0;
             transform: scale(0.5); // Inicia menor (do fundo)
@@ -355,31 +357,49 @@
                     background: $foreground;
 
                     &:first-child {
+                        background: url('/assets/guardians-bg.png') center/cover no-repeat;
                         box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.75);
+                        h3 {
+                            color: $background;
+                        }
+                        hr {
+                            border-color: $background;
+                        }
+                        p {
+                            color: $foreground;
+                        }
                     }
 
                     &:last-child {
+                        background: url('/assets/eclipse-bg.png') center/cover no-repeat;
                         box-shadow: -5px 0px 5px 0px rgba(0, 0, 0, 0.75);
+                        .info {
+                            p {
+                                color: $foreground;
+                            }
+                        }
                     }
 
                     img {
-                        position: absolute;
-                        opacity: .2;
-                        transform: scale(.8);
-                        z-index: -1;
+                        height: 20%;
+                        // position: absolute;
+                        // opacity: .2;
+                        // transform: scale(.3);
+                        // top: -10rem;
+                        // z-index: -1;
+                        // &.guardians {
+                        //     // left: 0;
+                        // }
 
-                        &.guardians {
-                            top: 0;
-                            left: 0;
-                        }
-
-                        &.eclipse {
-                            top: 0;
-                            right: 0;
-                        }
+                        // &.eclipse {
+                        //     top: -10rem;
+                        //     // right: 0;
+                        // }
                     }
 
                     .info {
+                        display: flex;
+                        flex-direction: column;
                         opacity: 1;
                         transform: scale(1);
                         // filter: drop-shadow(5px 5px 10px #000000);
@@ -394,20 +414,20 @@
             }
 
             .info {
-                position: absolute;
-                display: flex;
+                // position: absolute;
+                display: none;
                 flex-direction: column;
                 width: 80%;
                 // height: 100%;
                 color: $background;
-                opacity: 0;
+                // opacity: 0;
 
                 h3 {
                     text-transform: uppercase;
                     color: $yellow;
                     font-size: 3rem;
                     font-weight: 800;
-                    text-shadow: 1px 1px 2px #000000;
+                    // text-shadow: 1px 1px 2px #000000;
                 }
 
                 hr {
