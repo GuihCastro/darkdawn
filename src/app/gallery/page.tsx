@@ -12,15 +12,15 @@ import { IoClose } from "react-icons/io5";
 const Masonry = dynamic(() => import('react-responsive-masonry'), { ssr: false });
 
 export default function GalleryPage() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [currentImgIndex, setCurrentImgIndex] = useState(0);
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [currentImgIndex, setCurrentImgIndex] = useState<number>(0);
 
     useEffect(() => {
         // Defina corretamente o appElement para evitar erro
         Modal.setAppElement('#__next');
     }, []);
 
-    const images = [
+    const images: string[] = [
         '/assets/gallery/ilustra1.png',
         '/assets/gallery/ilustra2.png',
         '/assets/gallery/ilustra3.jpg',
@@ -33,21 +33,21 @@ export default function GalleryPage() {
         '/assets/gallery/ilustra10.png',
     ];
 
-    const openModal = (index: number) => {
+    const openModal = (index: number): void => {
         setCurrentImgIndex(index);
         setIsOpen(true);
     };
 
-    const closeModal = () => {
+    const closeModal = (): void => {
         setIsOpen(false);
         // setCurrentImg('');
     };
 
-    const goToNextImage = () => {
+    const goToNextImage = (): void => {
         setCurrentImgIndex((prevIndex) => (prevIndex + 1) % images.length);
     };
 
-    const goToPreviousImage = () => {
+    const goToPreviousImage = (): void => {
         setCurrentImgIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
 
