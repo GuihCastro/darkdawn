@@ -15,6 +15,10 @@ export default function GalleryPage() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [currentImgIndex, setCurrentImgIndex] = useState<number>(0);
 
+    const preventContextMenu = (event: React.MouseEvent<HTMLImageElement>): void => {
+        event.preventDefault();
+    };
+
     useEffect(() => {
         // Defina corretamente o appElement para evitar erro
         Modal.setAppElement('#__next');
@@ -76,6 +80,7 @@ export default function GalleryPage() {
                             src={image}
                             alt={`Gallery Image ${index + 1}`}
                             className={style.galleryImage}
+                            onContextMenu={preventContextMenu} // Impede o clique direito
                         />
                     </div>
                 ))}
@@ -88,7 +93,12 @@ export default function GalleryPage() {
                 className={style.modalContent}
                 overlayClassName={style.modalOverlay}
             >
-                <img src={images[currentImgIndex]} alt="Full View" className={style.modalImage} />
+                <img 
+                    src={images[currentImgIndex]} 
+                    alt="Full View" 
+                    className={style.modalImage}
+                    onContextMenu={preventContextMenu} // Impede o clique direito
+                />
                 <button onClick={closeModal} className={style.closeButton}>
                     <IoClose size={20} />
                 </button>
