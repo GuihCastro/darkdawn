@@ -4,13 +4,17 @@ import { useEffect, useRef, useState } from 'react';
 import style from './page.module.scss';
 import Header from '@/components/Header/Header';
 import CardSection from '@/components/CardSection/CardSection';
-// import Footer from '@/components/Footer/Footer';
+import Footer from '@/components/Footer/Footer';
 
 export default function Home() {
   const [isAbstractVisible, setIsAbstractVisible] = useState(false);
   const [isFactionsVisible, setIsFactionsVisible] = useState(false);
   const abstractRef = useRef<HTMLDivElement>(null);
   const factionsRef = useRef<HTMLDivElement>(null);
+
+  const preventContextMenu = (event: React.MouseEvent<HTMLImageElement>): void => {
+    event.preventDefault();
+  };
 
   // Hook para animar a seção abstract
   useEffect(() => {
@@ -26,16 +30,16 @@ export default function Home() {
         threshold: 0.02,
       }
     );
-  
+
     const currentRef = abstractRef.current; // Copia para uma variável
     if (currentRef) {
       observer.observe(currentRef);
     }
-  
+
     return () => {
       if (currentRef) observer.unobserve(currentRef);
     };
-  }, []);  
+  }, []);
 
   // Hook para animar a seção factions
   useEffect(() => {
@@ -51,16 +55,16 @@ export default function Home() {
         threshold: 0.1,
       }
     );
-  
+
     const currentRef = factionsRef.current; // Copia para uma variável
     if (currentRef) {
       observer.observe(currentRef);
     }
-  
+
     return () => {
       if (currentRef) observer.unobserve(currentRef);
     };
-  }, []);  
+  }, []);
 
   return (
     <div className={style.container}>
@@ -75,8 +79,8 @@ export default function Home() {
       >
         <div className={style.info}>
           <div className={`${style.characters} ${isAbstractVisible ? style.visible : ''}`}>
-            <img className={style.man} src="/assets/abstract1.png" alt="Worker character" />
-            <img className={style.woman} src="/assets/abstract2.png" alt="Worker character" />
+            <img className={style.man} src="/assets/abstract1.png" alt="Worker character" onContextMenu={preventContextMenu} />
+            <img className={style.woman} src="/assets/abstract2.png" alt="Worker character" onContextMenu={preventContextMenu} />
           </div>
           <div className={`${style.text} ${isAbstractVisible ? style.visible : ''}`}>
             <div className={style.title}>
@@ -100,7 +104,7 @@ export default function Home() {
         className={`${style.factions} ${isFactionsVisible ? style.visible : ''}`}
       >
         <div className={isFactionsVisible ? style.visible : ''}>
-          <img className={style.guardians} src="/assets/guardians.png" alt="Guardians of the Sun logo" />
+          <img className={style.guardians} src="/assets/guardians.png" alt="Guardians of the Sun logo" onContextMenu={preventContextMenu} />
           <div className={style.info}>
             <h3>Guardians of The Sun</h3>
             <hr />
@@ -110,7 +114,7 @@ export default function Home() {
           </div>
         </div>
         <div className={isFactionsVisible ? style.visible : ''}>
-          <img className={style.eclipse} src="/assets/eclipse_corp.png" alt="Eclipse Corp. logo" />
+          <img className={style.eclipse} src="/assets/eclipse_corp.png" alt="Eclipse Corp. logo" onContextMenu={preventContextMenu} />
           <div className={style.info}>
             <h3>Eclipse Corp.</h3>
             <hr />
@@ -123,7 +127,7 @@ export default function Home() {
 
       <CardSection />
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

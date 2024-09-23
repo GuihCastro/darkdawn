@@ -1,18 +1,80 @@
+@import '../../app/styles/variables';
+
 .container {
     width: 100%;
-    height: 30rem;
-    background-color: hsl(0, 0%, 90%);
-    box-shadow: inset hsla(0, 0%, 15%, 1) 0 0px 0px 4px,
-        /* border */
-        inset hsla(0, 0%, 15%, .8) 0 -1px 5px 4px,
-        /* soft SD */
-        inset hsla(0, 0%, 0%, .25) 0 -1px 0px 7px,
-        /* bottom SD */
-        inset hsla(0, 0%, 100%, .7) 0 2px 1px 7px,
-        /* top HL */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // border-top: 1px solid $gold;
+    background: $tertiary;
+    .content {
+        width: 100%;
+        max-width: 1920px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        .links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20rem;
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: .3rem;
+                h3 {
+                    color: $yellow;
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    opacity: .5;
+                }
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2rem;
+                    a {
+                        opacity: .3;
+                        transition: filter .2s, opacity .2s;
+                        &:hover {
+                            opacity: 1;
+                            filter: brightness(1.5);
+                        }
+                    }
+                }
+            }
+        }
+        hr {
+            width: 70%;
+            border-color: $gold;
+            opacity: .8;
+        }
+        p {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 300;
+            &:first-child {
+                color: $yellow;
+            }
+        }
+    }
+    // height: 30rem;
+    // background-color: hsl(0, 0%, 90%);
+    // box-shadow: inset hsla(0, 0%, 15%, 1) 0 0px 0px 4px,
+    //     /* border */
+    //     inset hsla(0, 0%, 15%, .8) 0 -1px 5px 4px,
+    //     /* soft SD */
+    //     inset hsla(0, 0%, 0%, .25) 0 -1px 0px 7px,
+    //     /* bottom SD */
+    //     inset hsla(0, 0%, 100%, .7) 0 2px 1px 7px,
+    //     /* top HL */
 
-        hsla(0, 0%, 0%, .15) 0 -5px 6px 4px,
-        /* outer SD */
-        hsla(0, 0%, 100%, .5) 0 5px 6px 4px;
-    /* outer HL */
+    //     hsla(0, 0%, 0%, .15) 0 -5px 6px 4px,
+    //     /* outer SD */
+    //     hsla(0, 0%, 100%, .5) 0 5px 6px 4px;
+    // /* outer HL */
 }

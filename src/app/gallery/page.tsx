@@ -4,16 +4,29 @@ import style from './page.module.scss';
 import dynamic from 'next/dynamic';
 import { useState, useEffect } from 'react';
 import Header from '@/components/Header/Header';
+import { Skeleton } from "@/components/ui/skeleton"
 import Modal from 'react-modal';
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+// import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { GrPrevious, GrNext } from "react-icons/gr";
 import { IoClose } from "react-icons/io5";
 
 // Importação dinâmica correta para Masonry e ResponsiveMasonry
 const Masonry = dynamic(() => import('react-responsive-masonry'), { ssr: false });
 
+// const SkeletonPlaceholder = () => (
+//     <div className="flex flex-col space-y-3">
+//       <Skeleton className="h-[125px] w-[250px] rounded-xl" />
+//       <div className="space-y-2">
+//         <Skeleton className="h-4 w-[250px]" />
+//         <Skeleton className="h-4 w-[200px]" />
+//       </div>
+//     </div>
+// );
+
 export default function GalleryPage() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [currentImgIndex, setCurrentImgIndex] = useState<number>(0);
+    const [loading, setLoading] = useState<boolean>(true);
 
     const preventContextMenu = (event: React.MouseEvent<HTMLImageElement>): void => {
         event.preventDefault();
@@ -35,6 +48,32 @@ export default function GalleryPage() {
         '/assets/gallery/ilustra8.jpg',
         '/assets/gallery/ilustra9.jpg',
         '/assets/gallery/ilustra10.png',
+        '/assets/gallery/cenario1.jpg',
+        '/assets/gallery/cenario2.jpg',
+        '/assets/gallery/cenario3.jpg',
+        '/assets/gallery/cenario4.jpg',
+        '/assets/gallery/cenario5.jpg',
+        '/assets/gallery/char1.jpg',
+        '/assets/gallery/char2.jpg',
+        '/assets/gallery/char3.jpg',
+        '/assets/gallery/char4.jpg',
+        '/assets/gallery/char5.jpg',
+        '/assets/gallery/char6.png',
+        '/assets/gallery/char7.png',
+        '/assets/gallery/char8.png',
+        '/assets/gallery/char9.png',
+        '/assets/gallery/char10.png',
+        '/assets/gallery/char11.png',
+        '/assets/gallery/char12.jpg',
+        '/assets/gallery/char13.jpg',
+        '/assets/gallery/char14.png',
+        '/assets/gallery/char15.jpg',
+        '/assets/gallery/char16.jpg',
+        '/assets/gallery/logo1.png',
+        '/assets/gallery/logo2.png',
+        '/assets/gallery/logo3.png',
+        '/assets/gallery/prop1.jpg',
+        '/assets/gallery/prop2.jpg',
     ];
 
     const openModal = (index: number): void => {
@@ -55,6 +94,11 @@ export default function GalleryPage() {
         setCurrentImgIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
 
+    const handleImageLoad = (): void => {
+        // Verifica se todas as imagens foram carregadas
+        setLoading(false);
+    };
+
     return (
         <div className={style.container}>
             <Header />
@@ -70,6 +114,7 @@ export default function GalleryPage() {
                 columnsCount={4}
                 gutter="2rem"
             >
+                {loading && images.map((_, index) => <Skeleton className="h-[125px] w-[250px] rounded-xl" key={index} />)}
                 {images.map((image, index) => (
                     <div
                         key={index}
@@ -80,6 +125,7 @@ export default function GalleryPage() {
                             src={image}
                             alt={`Gallery Image ${index + 1}`}
                             className={style.galleryImage}
+                            onLoad={handleImageLoad} // Define o estado de carregamento
                             onContextMenu={preventContextMenu} // Impede o clique direito
                         />
                     </div>
@@ -93,9 +139,9 @@ export default function GalleryPage() {
                 className={style.modalContent}
                 overlayClassName={style.modalOverlay}
             >
-                <img 
-                    src={images[currentImgIndex]} 
-                    alt="Full View" 
+                <img
+                    src={images[currentImgIndex]}
+                    alt="Full View"
                     className={style.modalImage}
                     onContextMenu={preventContextMenu} // Impede o clique direito
                 />
@@ -105,16 +151,16 @@ export default function GalleryPage() {
                 <button
                     className={`${style.prevBtn} ${currentImgIndex == 0 ? style.disable : ''}`}
                     onClick={goToPreviousImage}
-                    // disabled={currentImgIndex == 0}
+                // disabled={currentImgIndex == 0}
                 >
-                    <IoIosArrowBack size={100} />
+                    <GrPrevious size={50} />
                 </button>
                 <button
                     className={`${style.nextBtn} ${currentImgIndex == (images.length - 1) ? style.disable : ''}`}
                     onClick={goToNextImage}
-                    // disabled={images.length <= 1}
+                // disabled={images.length <= 1}
                 >
-                    <IoIosArrowForward size={100} />
+                    <GrNext size={50} />
                 </button>
             </Modal>
         </div>

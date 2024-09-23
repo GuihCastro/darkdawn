@@ -21,26 +21,26 @@
             width: 25rem;
             height: 25rem;
             filter: brightness(80%);
-            border: 1px solid $yellow;
+            border: 1px solid $gold;
             border-radius: 50%;
         }
         h2 {
             text-transform: uppercase;
             font-size: 3rem;
             font-weight: 800;
-            color: $gold;
+            color: $yellow;
             margin-top: 2rem;
         }
         hr {
             width: 70%;
-            border-color: $yellow;
+            border-color: $gold;
             margin-bottom: 2rem;
         }
         span {
             display: flex;
             gap: 2rem;
             a {
-                color: $yellow;
+                color: $gold;
                 opacity: .3;
                 transition: .2s;
                 &:hover {

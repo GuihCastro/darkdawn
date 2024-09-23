@@ -33,20 +33,20 @@ export default function CardSection() {
     const cards = [
         {
             backgroundImage: '/assets/card1.jpg',
-            title: 'Artistas',
+            title: 'Artists',
             items: ['Mari Livraes', 'Mike Azevedo'],
             href: '/artists',
         },
         {
             backgroundImage: '/assets/card2.jpg',
             title: 'Wordbuilding',
-            items: ['Sobre o projeto', 'Contos'],
+            items: ['About the project', 'Tales'],
             href: '/worldbuilding',
         },
         {
             backgroundImage: '/assets/card3.jpg',
-            title: 'Galeria',
-            items: ['Ilustras', 'Cenários', 'Characters', 'Props', 'Extras'],
+            title: 'Gallery',
+            items: ['Illustrations', 'Environments', 'Characters', 'Props', 'Extra'],
             href: '/gallery',
         },
         {

@@ -1,5 +1,32 @@
 @import '../styles/variables';
 
+// @keyframes loading {
+//     0% {
+//         background-position: 100% 0;
+//     }
+
+//     100% {
+//         background-position: 0 0;
+//     }
+// }
+
+// .skeleton {
+//     position: relative;
+//     width: 100%;
+//     height: 200px; // Defina a altura que preferir
+//     border-radius: .5rem;
+//     overflow: hidden;
+//     background: #e0e0e0; // Cor do esqueleto
+
+//     &.skeletonImage {
+//         position: absolute;
+//         width: 100%;
+//         height: 100%;
+//         background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+//         animation: loading 1.5s infinite;
+//     }
+// }
+
 .container {
     position: relative;
     margin: 0 auto;
@@ -27,13 +54,14 @@
             text-transform: uppercase;
             font-size: 3rem;
             font-weight: 800;
-            color: $gold;
+            color: $yellow;
         }
 
         hr {
             align-self: center;
             width: 70%;
-            border-color: $yellow;
+            border-color: $gold;
+            // size: 0.5px;
             // margin-bottom: 5rem;
         }
     }
@@ -43,17 +71,18 @@
         height: 100%;
         margin-top: 12rem;
         padding: 2rem;
+
         .imageWrapper {
             border-radius: .5rem;
             cursor: pointer;
             overflow: hidden;
-    
+
             img {
                 width: 100%;
                 height: auto;
                 filter: brightness(.8);
                 transition: transform 0.3s ease, filter .2s ease-in-out;
-    
+
                 &:hover {
                     transform: scale(1.1);
                     filter: brightness(1);
@@ -117,7 +146,7 @@
     height: 90vh;
     // max-width: 1920px;
     margin: 0 auto;
-    background: #ffffff95;
+    background: transparent;
     padding: 2rem;
     border-radius: 10px;
     outline: none;
@@ -154,31 +183,39 @@
     border-radius: 50%;
     cursor: pointer;
 }
+
 .prevBtn,
 .nextBtn {
     z-index: 999;
     top: calc(50% - 50px);
     color: $gold;
     background: none;
-    transition: filter .2s;
+    opacity: .3;
+    transition: filter .2s, opacity .2s;
+
     &:hover {
+        opacity: 1;
         filter: brightness(1.5);
     }
 }
+
 .prevBtn {
-    left: -10rem;
+    left: -5rem;
 }
+
 .nextBtn {
-    right: -10rem;
+    right: -5rem;
 }
+
 .closeButton {
-    top: -2rem;
-    right: -2rem;
+    top: 0rem;
+    right: 0rem;
     background-color: $gold;
     color: #fff;
     border: none;
     padding: 1rem;
 }
+
 .disable {
     display: none;
 }
