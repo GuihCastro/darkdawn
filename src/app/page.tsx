@@ -135,10 +135,10 @@ export default function Home() {
           <div className={style.info}>
             <h2>Eclipse Corp.</h2>
             <hr />
-            <p>No one knows how or when they arrived. It's as if they've been there forever, although that's not true.
-              Their faces are unknown, and their whereabouts even more so. They are right there, dominating, sucking, parasitizing those people and their homes, but it's as if they didn't even exist. Although witnesses of their presence are everywhere: all the factories, buildings, colossal machines and, obviously, its fog that takes over every corner of the city. All of this belongs to them, and it is right there, imposing itself on every miserable citizen of that place.
+            <p>No one knows how or when they arrived. It&apos;s as if they&apos;ve been there forever, although that&apos;s not true.
+              Their faces are unknown, and their whereabouts even more so. They are right there, dominating, sucking, parasitizing those people and their homes, but it&apos;s as if they didn&apos;t even exist. Although witnesses of their presence are everywhere: all the factories, buildings, colossal machines and, obviously, its fog that takes over every corner of the city. All of this belongs to them, and it is right there, imposing itself on every miserable citizen of that place.
               Their will is asserted through the workers themselves, or rather a small portion of them, who, in exchange for some derisory advantage (true crumbs!) throw their own brothers into the mouths of the furnaces that feed those metal titans.
-              One may not see them, and even ignore their existence, but one don't take a single step outside the line they have drawn.</p>
+              One may not see them, and even ignore their existence, but one don&apos;t take a single step outside the line they have drawn.</p>
             <br />
             <p></p>
           </div>
