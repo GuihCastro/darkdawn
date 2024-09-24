@@ -301,7 +301,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 5rem 15rem 15rem;
+        padding: 15rem;
         gap: 3rem;
 
         .info {
@@ -309,15 +309,15 @@
             width: 100%;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: space-around;
 
             .characters {
-                position: absolute;
-                left: 0;
-                top: 0;
+                // position: absolute;
+                // left: 0;
+                // top: 0;
                 height: 60rem;
                 display: flex;
-                justify-self: flex-start;
+                // justify-self: flex-start;
                 align-items: center;
 
                 opacity: 0;
@@ -332,19 +332,20 @@
 
                 img {
                     height: 100%;
-                }
-
-                .man {
                     filter: drop-shadow(15px 5px 10px #000000);
                 }
 
-                .woman {
-                    position: absolute;
-                    left: 20rem;
-                    bottom: 5rem;
-                    height: 85%;
-                    z-index: -1;
-                }
+                // .man {
+                //     filter: drop-shadow(15px 5px 10px #000000);
+                // }
+
+                // .woman {
+                //     position: absolute;
+                //     left: 20rem;
+                //     bottom: 5rem;
+                //     height: 85%;
+                //     z-index: -1;
+                // }
             }
 
             .text {
@@ -392,7 +393,7 @@
                 p {
                     // font-family: 'NyghtSerif', serif;
                     // font-size: 1.5rem;
-                    font-weight: 100;
+                    font-weight: 300;
                 }
             }
         }
@@ -519,13 +520,14 @@
                 hr {
                     width: 80%;
                     border-color: $gold;
-                    margin-bottom: 1rem;
+                    // margin-bottom: 1rem;
                 }
 
                 p {
-                    text-align: center;
-                    font-size: 2rem;
+                    text-align: justify;
+                    font-size: 1.6rem;
                     font-weight: 300;
+                    margin-top: 2rem;
                 }
             }
         }

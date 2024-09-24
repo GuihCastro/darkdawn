@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @import './variables';
 
 // .gothic-a1-thin {
@@ -101,6 +104,7 @@
 
 /* Definir a fonte raiz para 1rem = 10px */
 html {
+  // font-family: "Montserrat", sans-serif;
   font-size: 62.5%;
   /* 16px * 62.5% = 10px */
 }
@@ -123,6 +127,7 @@ body {
   background: $background;
   // font-family: 'NyghtSerif', serif;
   font-family: "Gothic A1", sans-serif;
+  // font-family: "Montserrat", sans-serif;
   // font-weight: 100;
   font-size: 1.6rem;
   letter-spacing: .2rem;

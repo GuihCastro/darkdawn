@@ -80,7 +80,7 @@ export default function WorldbuildingPage() {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, voluptatibus consequatur repudiandae nam sint quibusdam et officia, fugiat esse vitae cupiditate vero nulla saepe autem. Quae sit quia dignissimos fuga!</p>
                 </div>
                 <div className={`${styles.char} ${isAboutVisible ? styles.visible : ''}`}>
-                    <img src="/assets/sowilo1.png" alt="Sowilo character art" />
+                    <img src="/assets/worldbuilding.png" alt="City landscape art" />
                 </div>
             </section>
             <section

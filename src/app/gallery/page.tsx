@@ -38,6 +38,18 @@ export default function GalleryPage() {
     }, []);
 
     const images: string[] = [
+        '/assets/gallery/char1.jpg',
+        '/assets/gallery/char2.jpg',
+        '/assets/gallery/char3.jpg',
+        '/assets/gallery/char4.jpg',
+        '/assets/gallery/char5.png',
+        '/assets/gallery/char6.jpg',
+        '/assets/gallery/char7.jpg',
+        '/assets/gallery/char8.jpg',
+        '/assets/gallery/char9.jpg',
+        '/assets/gallery/char10.jpg',
+        '/assets/gallery/char11.jpg',
+        '/assets/gallery/char12.jpg',
         '/assets/gallery/ilustra1.png',
         '/assets/gallery/ilustra2.png',
         '/assets/gallery/ilustra3.jpg',
@@ -53,27 +65,9 @@ export default function GalleryPage() {
         '/assets/gallery/cenario3.jpg',
         '/assets/gallery/cenario4.jpg',
         '/assets/gallery/cenario5.jpg',
-        '/assets/gallery/char1.jpg',
-        '/assets/gallery/char2.jpg',
-        '/assets/gallery/char3.jpg',
-        '/assets/gallery/char4.jpg',
-        '/assets/gallery/char5.jpg',
-        '/assets/gallery/char6.png',
-        '/assets/gallery/char7.png',
-        '/assets/gallery/char8.png',
-        '/assets/gallery/char9.png',
-        '/assets/gallery/char10.png',
-        '/assets/gallery/char11.png',
-        '/assets/gallery/char12.jpg',
-        '/assets/gallery/char13.jpg',
-        '/assets/gallery/char14.png',
-        '/assets/gallery/char15.jpg',
-        '/assets/gallery/char16.jpg',
-        '/assets/gallery/logo1.png',
-        '/assets/gallery/logo2.png',
-        '/assets/gallery/logo3.png',
         '/assets/gallery/prop1.jpg',
         '/assets/gallery/prop2.jpg',
+        '/assets/gallery/prop3.jpg',
     ];
 
     const openModal = (index: number): void => {
@@ -98,6 +92,26 @@ export default function GalleryPage() {
         // Verifica se todas as imagens foram carregadas
         setLoading(false);
     };
+
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (isOpen) {
+                if (event.key === 'ArrowRight') {
+                    goToNextImage();
+                } else if (event.key === 'ArrowLeft') {
+                    goToPreviousImage();
+                } else if (event.key === 'Escape') {
+                    closeModal();
+                }
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [isOpen, currentImgIndex]);
 
     return (
         <div className={style.container}>
@@ -136,6 +150,7 @@ export default function GalleryPage() {
             <Modal
                 isOpen={isOpen}
                 onRequestClose={closeModal}
+                shouldCloseOnOverlayClick
                 className={style.modalContent}
                 overlayClassName={style.modalOverlay}
             >
@@ -145,9 +160,9 @@ export default function GalleryPage() {
                     className={style.modalImage}
                     onContextMenu={preventContextMenu} // Impede o clique direito
                 />
-                <button onClick={closeModal} className={style.closeButton}>
+                {/* <button onClick={closeModal} className={style.closeButton}>
                     <IoClose size={20} />
-                </button>
+                </button> */}
                 <button
                     className={`${style.prevBtn} ${currentImgIndex == 0 ? style.disable : ''}`}
                     onClick={goToPreviousImage}

@@ -92,13 +92,13 @@ export default function Home() {
       >
         <div className={style.info}>
           <div className={`${style.characters} ${isAbstractVisible ? style.visible : ''}`}>
-            <img className={style.man} src="/assets/abstract1.png" alt="Worker character" onContextMenu={preventContextMenu} />
-            <img className={style.woman} src="/assets/abstract2.png" alt="Worker character" onContextMenu={preventContextMenu} />
+            <img src="/assets/abstract1.png" alt="Sowilo" onContextMenu={preventContextMenu} />
+            {/* <img className={style.woman} src="/assets/abstract2.png" alt="Worker character" onContextMenu={preventContextMenu} /> */}
           </div>
           <div className={`${style.text} ${isAbstractVisible ? style.visible : ''}`}>
             <div className={style.title}>
               <h2>Darkdawn</h2>
-              <hr />
+              {/* <hr /> */}
               <h3>An art project by Mari Livraes and Mike Azevedo</h3>
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat natus quasi iure accusamus. Nisi voluptate magnam fugiat neque nobis quo nihil ipsum fugit facilis ut. Itaque dolorem quos sapiente harum!
@@ -121,9 +121,13 @@ export default function Home() {
           <div className={style.info}>
             <h2>Guardians of The Sun</h2>
             <hr />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quod dignissimos suscipit numquam dolor hic illo quo ullam, nulla molestias id libero rerum, delectus voluptatem, consequatur exercitationem autem soluta ratione.</p>
+            <p>Despite the intoxicating state imposed by the magic of the Mist, a few workers manage to awaken from mechanistic apathy and, freed from stunning blindness, see the destination to which they are being guided day after day. Brothers wasting away, going crazy, becoming beasts and even disappearing, while the others simply continue going on, following the same repetitive and exhausting routine, as if nothing had happened; as if nothing could even happen.
+              Once aware and determined to avoid the inexorable future, they meet, unite, organize themselves... And thus the resistance group called Guardians of the Sun was born.
+              Its leader, The Bright One, Sowilo is the bastion of this revolutionary phalanx, and the greatest threat ever known to the Eclipse Corp.
+              They are determined to make the sun shine once again on the city taken by shadows.
+            </p>
             <br />
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, est molestias! Excepturi at incidunt ea praesentium quaerat magnam, deleniti odit exercitationem laudantium ab porro voluptates ratione sunt doloribus doloremque repudiandae.</p>
+            <p></p>
           </div>
         </div>
         <div className={isFactionsVisible ? style.visible : ''}>
@@ -131,9 +135,12 @@ export default function Home() {
           <div className={style.info}>
             <h2>Eclipse Corp.</h2>
             <hr />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quod dignissimos suscipit numquam dolor hic illo quo ullam, nulla molestias id libero rerum, delectus voluptatem, consequatur exercitationem autem soluta ratione.</p>
+            <p>No one knows how or when they arrived. It's as if they've been there forever, although that's not true.
+              Their faces are unknown, and their whereabouts even more so. They are right there, dominating, sucking, parasitizing those people and their homes, but it's as if they didn't even exist. Although witnesses of their presence are everywhere: all the factories, buildings, colossal machines and, obviously, its fog that takes over every corner of the city. All of this belongs to them, and it is right there, imposing itself on every miserable citizen of that place.
+              Their will is asserted through the workers themselves, or rather a small portion of them, who, in exchange for some derisory advantage (true crumbs!) throw their own brothers into the mouths of the furnaces that feed those metal titans.
+              One may not see them, and even ignore their existence, but one don't take a single step outside the line they have drawn.</p>
             <br />
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, est molestias! Excepturi at incidunt ea praesentium quaerat magnam, deleniti odit exercitationem laudantium ab porro voluptates ratione sunt doloribus doloremque repudiandae.</p>
+            <p></p>
           </div>
         </div>
       </section>

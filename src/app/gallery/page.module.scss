@@ -79,6 +79,7 @@
 
             img {
                 width: 100%;
+                // max-width: 90%;
                 height: auto;
                 filter: brightness(.8);
                 transition: transform 0.3s ease, filter .2s ease-in-out;
@@ -141,10 +142,13 @@
 .modalContent {
     position: relative;
     z-index: 999;
-    width: auto;
-    max-width: 90vw;
-    height: 90vh;
+    // width: 100%;
     // max-width: 1920px;
+    // // max-width: 90vw;
+    // height: 100vh;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
     margin: 0 auto;
     background: transparent;
     padding: 2rem;
@@ -152,8 +156,12 @@
     outline: none;
 
     .modalImage {
-        height: 100%;
-        width: auto;
+        margin: 0 auto;
+        height: 100vh;
+        max-height: 90vh;
+        width: 100%;
+        max-width: 90%;
+        object-fit: contain;
     }
 }
 
@@ -173,7 +181,7 @@
 .closeButton,
 .prevBtn,
 .nextBtn {
-    position: absolute;
+    position: fixed;
     // height: 5rem;
     // width: 5rem;
     display: flex;
@@ -200,21 +208,22 @@
 }
 
 .prevBtn {
-    left: -5rem;
+    left: 0rem;
 }
 
 .nextBtn {
-    right: -5rem;
+    right: 0rem;
 }
 
-.closeButton {
-    top: 0rem;
-    right: 0rem;
-    background-color: $gold;
-    color: #fff;
-    border: none;
-    padding: 1rem;
-}
+// .closeButton {
+//     // top: 2rem;
+//     // right: 2rem;
+//     bottom: 2rem;
+//     background-color: $gold;
+//     color: #fff;
+//     border: none;
+//     padding: 1rem;
+// }
 
 .disable {
     display: none;
