@@ -9,12 +9,22 @@ import Footer from '@/components/Footer/Footer';
 export default function Home() {
   const [isAbstractVisible, setIsAbstractVisible] = useState(false);
   const [isFactionsVisible, setIsFactionsVisible] = useState(false);
+  const [contentVisible, setContentVisible] = useState(false);
   const abstractRef = useRef<HTMLDivElement>(null);
   const factionsRef = useRef<HTMLDivElement>(null);
 
   const preventContextMenu = (event: React.MouseEvent<HTMLImageElement>): void => {
     event.preventDefault();
   };
+
+  useEffect(() => {
+    // Define um timeout que coincide com a duração da animação
+    const timer = setTimeout(() => {
+      setContentVisible(true);
+    }, 2900); // 3000ms é o tempo da animação text-flicker-in-glow
+
+    return () => clearTimeout(timer); // Limpa o timer se o componente for desmontado
+  }, []);
 
   // Hook para animar a seção abstract
   useEffect(() => {
@@ -67,9 +77,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={style.container}>
-      <main>
-        <Header />
+    <div className={`${style.container} ${contentVisible ? style.fadeIn : ''}`}>
+      <main className={contentVisible ? style.bgVisible : ''}>
+        {/* <Header contentVisible={contentVisible} /> */}
+        <header className={`${contentVisible ? style.fadeIn : ''}`}>
+          <img src="/assets/logo.png" alt="DarkDawn logo" />
+        </header>
         <h1>The sun will shine again for us</h1>
       </main>
 
@@ -106,7 +119,7 @@ export default function Home() {
         <div className={isFactionsVisible ? style.visible : ''}>
           <img className={style.guardians} src="/assets/guardians.png" alt="Guardians of the Sun logo" onContextMenu={preventContextMenu} />
           <div className={style.info}>
-            <h3>Guardians of The Sun</h3>
+            <h2>Guardians of The Sun</h2>
             <hr />
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quod dignissimos suscipit numquam dolor hic illo quo ullam, nulla molestias id libero rerum, delectus voluptatem, consequatur exercitationem autem soluta ratione.</p>
             <br />
@@ -116,7 +129,7 @@ export default function Home() {
         <div className={isFactionsVisible ? style.visible : ''}>
           <img className={style.eclipse} src="/assets/eclipse_corp.png" alt="Eclipse Corp. logo" onContextMenu={preventContextMenu} />
           <div className={style.info}>
-            <h3>Eclipse Corp.</h3>
+            <h2>Eclipse Corp.</h2>
             <hr />
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quod dignissimos suscipit numquam dolor hic illo quo ullam, nulla molestias id libero rerum, delectus voluptatem, consequatur exercitationem autem soluta ratione.</p>
             <br />
