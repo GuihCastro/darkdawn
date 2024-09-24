@@ -96,20 +96,20 @@ export default function GalleryPage() {
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
             if (isOpen) {
-                if (event.key === 'ArrowRight') {
+                if (event.key === "ArrowRight") {
                     goToNextImage();
-                } else if (event.key === 'ArrowLeft') {
+                } else if (event.key === "ArrowLeft") {
                     goToPreviousImage();
-                } else if (event.key === 'Escape') {
+                } else if (event.key === "Escape") {
                     closeModal();
                 }
             }
         };
 
-        window.addEventListener('keydown', handleKeyDown);
+        window.addEventListener("keydown", handleKeyDown);
 
         return () => {
-            window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener("keydown", handleKeyDown);
         };
     }, [isOpen, currentImgIndex]);
 
