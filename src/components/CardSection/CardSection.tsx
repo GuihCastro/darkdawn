@@ -39,7 +39,7 @@ export default function CardSection() {
         },
         {
             backgroundImage: '/assets/card2.jpg',
-            title: 'Wordbuilding',
+            title: 'Worldbuilding',
             items: ['About the project', 'Tales'],
             href: '/worldbuilding',
         },

@@ -1,5 +1,32 @@
 @import '../styles/variables';
 
+// @keyframes loading {
+//     0% {
+//         background-position: 100% 0;
+//     }
+
+//     100% {
+//         background-position: 0 0;
+//     }
+// }
+
+// .skeleton {
+//     position: relative;
+//     width: 100%;
+//     height: 200px; // Defina a altura que preferir
+//     border-radius: .5rem;
+//     overflow: hidden;
+//     background: #e0e0e0; // Cor do esqueleto
+
+//     &.skeletonImage {
+//         position: absolute;
+//         width: 100%;
+//         height: 100%;
+//         background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+//         animation: loading 1.5s infinite;
+//     }
+// }
+
 .container {
     position: relative;
     margin: 0 auto;
@@ -52,6 +79,7 @@
 
             img {
                 width: 100%;
+                // max-width: 90%;
                 height: auto;
                 filter: brightness(.8);
                 transition: transform 0.3s ease, filter .2s ease-in-out;
@@ -63,15 +91,64 @@
             }
         }
     }
+
+    // .gallery {
+    //     display: grid;
+    //     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    //     grid-template-rows: ;
+    //     gap: 2rem;
+    //     width: 100%;
+    //     height: 100%;
+    //     margin-top: 15rem;
+    //     padding: 2rem;
+
+    //     .imageContainer {
+    //         position: relative;
+    //         overflow: hidden;
+
+    //         img {
+    //             width: 100%;
+    //             height: auto;
+    //             transition: transform 0.3s ease-in-out;
+    //             object-fit: cover;
+    //         }
+
+    //         &:hover img {
+    //             transform: scale(1.1);
+    //             cursor: pointer;
+    //         }
+    //     }
+    // }
+
+    // .modal {
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: rgba(0, 0, 0, 0.8);
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     z-index: 10;
+
+    //     img {
+    //         max-width: 90%;
+    //         max-height: 90%;
+    //     }
+    // }
 }
 
 .modalContent {
     position: relative;
     z-index: 999;
-    width: auto;
-    max-width: 90vw;
-    height: 90vh;
+    // width: 100%;
     // max-width: 1920px;
+    // // max-width: 90vw;
+    // height: 100vh;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
     margin: 0 auto;
     background: transparent;
     padding: 2rem;
@@ -79,8 +156,12 @@
     outline: none;
 
     .modalImage {
-        height: 100%;
-        width: auto;
+        margin: 0 auto;
+        height: 100vh;
+        max-height: 90vh;
+        width: 100%;
+        max-width: 90%;
+        object-fit: contain;
     }
 }
 
@@ -100,24 +181,13 @@
 .closeButton,
 .prevBtn,
 .nextBtn {
-    position: absolute;
-    // height: 5rem;
-    // width: 5rem;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
     cursor: pointer;
-}
-
-.prevBtn,
-.nextBtn {
-    z-index: 999;
-    top: calc(50% - 50px);
-    color: $gold;
-    background: none;
-    opacity: .3;
+    opacity: .8;
     transition: filter .2s, opacity .2s;
 
     &:hover {
@@ -126,17 +196,27 @@
     }
 }
 
+.prevBtn,
+.nextBtn {
+    z-index: 999;
+    top: calc(50% - 50px);
+    color: $gold;
+    background: none;
+}
+
 .prevBtn {
-    left: -5rem;
+    left: 0rem;
 }
 
 .nextBtn {
-    right: -5rem;
+    right: 0rem;
 }
 
 .closeButton {
-    top: 0rem;
-    right: 0rem;
+    top: 2rem;
+    right: 2rem;
+    height: 4rem;
+    width: 4rem;
     background-color: $gold;
     color: #fff;
     border: none;

@@ -11,7 +11,7 @@ export default function ArtistsPage() {
                 <img src="/assets/mari.jpeg" alt="Avatar Mari Livraes" />
                 <h2>Mari Livraes</h2>
                 <hr />
-                <p>Concept Artist com especial paixão por temas de Dark Fantasy. Tendo vasta experiência trabalhando com diversas empresas e projetos, tanto no mercado nacional quanto internacional AAA.</p>
+                <p>Concept Artist with a special passion for Dark Fantasy themes. Having extensive experience working with various companies and projects, both in the national and international AAA market. Art and Character Design Instructor at ICS</p>
                 <br />
                 <span>
                     <Link href='https://www.artstation.com/marilivraes' target='_blank'>
@@ -29,7 +29,7 @@ export default function ArtistsPage() {
                 <img src="/assets/mike.jpeg" alt="Avatar Mike Azevedo" />
                 <h2>Mike Azevedo</h2>
                 <hr />
-                <p>Ilustrador e Concept Artist nascido em Osasco, trabalha com games e já teve como clientes Riot Games / Valve / Blizzard / NCsoft / Tencent / Supercell / Guerrilla. Gosta de fazer pinturas digitais e tradicionais coloridas e divertidas, criador da MAR Studio e professor na ICS desde 2013.</p>
+                <p>Illustrator and Concept Artist born in Osasco, works with games and has had Riot Games / Valve / Blizzard / NCsoft / Tencent / Supercell / Guerrilla as clients. He enjoys making colorful and fun digital and traditional paintings, creator of MAR Studio and teacher at ICS since 2013.</p>
                 <br />
                 <span>
                     <Link href='https://www.artstation.com/mikeazevedo' target='_blank'>

@@ -8,7 +8,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 import Modal from 'react-modal';
 // import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { GrPrevious, GrNext } from "react-icons/gr";
-// import { IoClose } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
 
 // Importação dinâmica correta para Masonry e ResponsiveMasonry
 const Masonry = dynamic(() => import('react-responsive-masonry'), { ssr: false });
@@ -160,9 +160,9 @@ export default function GalleryPage() {
                     className={style.modalImage}
                     onContextMenu={preventContextMenu} // Impede o clique direito
                 />
-                {/* <button onClick={closeModal} className={style.closeButton}>
+                <button onClick={closeModal} className={style.closeButton}>
                     <IoClose size={20} />
-                </button> */}
+                </button>
                 <button
                     className={`${style.prevBtn} ${currentImgIndex == 0 ? style.disable : ''}`}
                     onClick={goToPreviousImage}

@@ -54,6 +54,26 @@ export default function WipsPage() {
         setLoading(false);
     };
 
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (isOpen) {
+                if (event.key === "ArrowRight") {
+                    goToNextImage();
+                } else if (event.key === "ArrowLeft") {
+                    goToPreviousImage();
+                } else if (event.key === "Escape") {
+                    closeModal();
+                }
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [isOpen, currentImgIndex]);
+
     return (
         <div className={style.container}>
             <Header />
@@ -91,6 +111,7 @@ export default function WipsPage() {
             <Modal
                 isOpen={isOpen}
                 onRequestClose={closeModal}
+                shouldCloseOnOverlayClick
                 className={style.modalContent}
                 overlayClassName={style.modalOverlay}
             >
