@@ -256,9 +256,9 @@
             /* Fica atrás do conteúdo */
         }
 
-        h1 {
-            animation: text-flicker-in-glow 4s linear both;
-        }
+        // h1 {
+        //     animation: text-flicker-in-glow 4s linear both;
+        // }
 
         header {
             position: fixed;
@@ -291,10 +291,18 @@
             z-index: 1;
             text-transform: uppercase;
             font-size: 5rem;
+            animation: text-flicker-in-glow 4s linear both;
         }
     }
 
+    .separator {
+        width: 100%;
+        height: 1rem;
+        background: $gold;
+    }
+
     .abstract {
+        position: relative;
         width: 100%;
         max-width: 1920px;
         height: 100vh;
@@ -304,6 +312,23 @@
         justify-content: center;
         padding: 15rem;
         gap: 3rem;
+        background: url('/assets/bg-placeholder2.png') center/cover no-repeat;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            /* Usa a mesma imagem do background */
+            filter: brightness(.8);
+            /* Reduz o brilho (simulando opacidade) */
+            z-index: 0;
+            // transition: filter 1s ease-out;
+            // opacity: 0;
+            /* Fica atrás do conteúdo */
+        }
 
         .info {
             position: relative;
@@ -385,7 +410,7 @@
                     }
 
                     h3 {
-                        color: $secondary;
+                        color: $tertiary;
                         font-size: 2rem;
                         font-weight: 600;
                     }
@@ -394,7 +419,8 @@
                 p {
                     // font-family: 'NyghtSerif', serif;
                     // font-size: 1.5rem;
-                    font-weight: 300;
+                    color: $background;
+                    font-weight: 400;
                 }
             }
         }
