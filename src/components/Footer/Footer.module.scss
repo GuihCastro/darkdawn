@@ -62,19 +62,41 @@
             }
         }
     }
-    // height: 30rem;
-    // background-color: hsl(0, 0%, 90%);
-    // box-shadow: inset hsla(0, 0%, 15%, 1) 0 0px 0px 4px,
-    //     /* border */
-    //     inset hsla(0, 0%, 15%, .8) 0 -1px 5px 4px,
-    //     /* soft SD */
-    //     inset hsla(0, 0%, 0%, .25) 0 -1px 0px 7px,
-    //     /* bottom SD */
-    //     inset hsla(0, 0%, 100%, .7) 0 2px 1px 7px,
-    //     /* top HL */
 
-    //     hsla(0, 0%, 0%, .15) 0 -5px 6px 4px,
-    //     /* outer SD */
-    //     hsla(0, 0%, 100%, .5) 0 5px 6px 4px;
-    // /* outer HL */
+    @media (max-width: 426px) {
+        .content {
+            padding: 1.5rem;
+            gap: 1.5rem;
+
+            .links {
+                // flex-direction: column;
+                gap: 5rem;
+
+                div {
+                    gap: 0.5rem;
+
+                    h3 {
+                        font-size: 1.25rem; // Reduz o tamanho da fonte para dispositivos móveis
+                    }
+
+                    span {
+                        // flex-direction: column; // Ajusta os links para uma coluna em telas menores
+                        gap: 1.5rem;
+
+                        a {
+                            font-size: 0.875rem; // Reduz o tamanho da fonte dos links
+                        }
+                    }
+                }
+            }
+
+            hr {
+                width: 90%; // Aumenta o width do hr para preencher mais a tela
+            }
+
+            p {
+                font-size: 0.875rem; // Reduz o tamanho do texto das parágrafos
+            }
+        }
+    }
 }

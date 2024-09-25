@@ -103,10 +103,7 @@ export default function Home() {
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat natus quasi iure accusamus. Nisi voluptate magnam fugiat neque nobis quo nihil ipsum fugit facilis ut. Itaque dolorem quos sapiente harum!
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quidem neque nisi voluptatibus vitae deserunt, tempore blanditiis mollitia in quia ex nulla cum porro eum sed aliquid quis et repellat?
-            </p>
-            <br />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse facilis sed reiciendis consectetur necessitatibus consequuntur temporibus odio officiis nemo error, in obcaecati cum iusto! At natus autem voluptatem earum. Accusamus?
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati necessitatibus voluptatum id praesentium commodi possimus dicta accusantium sed totam, quasi harum autem nobis magni, eum perspiciatis doloremque aliquid! Dolore, velit!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse facilis sed reiciendis consectetur necessitatibus consequuntur temporibus odio officiis nemo error, in obcaecati cum iusto! At natus autem voluptatem earum. Accusamus?
             </p>
           </div>
         </div>

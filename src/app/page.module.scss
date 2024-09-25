@@ -272,6 +272,7 @@
             // opacity: 0;
             transform: translateY(-10rem);
             transition: transform 1s ease-in-out;
+
             // align-self: flex-start;
             // justify-self: flex-start;
             // justify-content: flex-start;
@@ -535,19 +536,103 @@
             }
         }
     }
+}
 
-    // .cards {
-    //     width: 100%;
-    //     min-height: 100vh;
-    //     padding: 10rem;
-    // }
+@media (max-width: 426px) {
+    .container {
+        // padding: 1rem;
+        main {
+            flex-direction: column;
+            background: url('/assets/bg-placeholder-mob.png') center/cover no-repeat;
+            padding: 1rem;
+            // min-height: 100vh;
+            margin-bottom: 3rem;
+            h1 {
+                font-size: 3rem;
+                text-align: center;
+            }
 
-    // section {
-    //     width: 100%;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     padding: 5rem;
-    //     // border-top: 1rem solid $foreground;
-    // }
+            header {
+                max-width: 100vw;
+                // padding: 0.5rem 1rem;
+
+                img {
+                    width: 10rem; // Reduzindo o tamanho do logo
+                }
+            }
+        }
+
+        .abstract {
+            padding: 2rem 1rem;
+            gap: 1rem;
+
+            .info {
+                flex-direction: column; // Alterando layout para empilhar os itens
+                text-align: center;
+
+                .characters {
+                    height: 20rem; // Ajustando o tamanho das imagens
+
+                    img {
+                        height: 100%; // Garantindo que as imagens se ajustem ao novo tamanho
+                    }
+                }
+
+                .text {
+                    width: 100%; // Ocupar 100% da largura disponível
+
+                    .title {
+                        margin: 2rem 0;
+                        h2 {
+                            font-size: 2rem; // Reduzindo o tamanho do título
+                        }
+
+                        h3 {
+                            font-size: 1.5rem; // Reduzindo o subtítulo
+                        }
+                    }
+
+                    p {
+                        font-size: 1.2rem; // Ajustando o tamanho do texto para maior legibilidade
+                    }
+                }
+            }
+        }
+
+        .factions {
+            flex-direction: column;
+            height: auto; // Ajustando a altura da seção para caber melhor em telas menores
+            padding: 1rem 0;
+
+            div {
+                padding: 2rem 1rem;
+
+                &.visible {
+                    &:hover {
+                        padding-top: 2rem;
+                        img {
+                            height: 10rem;
+                        }
+                    }
+    
+                }
+                
+                img {
+                    height: 20rem;
+                }
+
+                .info {
+                    width: 100%;
+                    h2 {
+                        font-size: 2rem; // Reduzindo o tamanho da fonte dos títulos
+                    }
+
+                    p {
+                        font-size: 1.2rem; // Ajustando o tamanho do texto descritivo
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
 }
