@@ -438,6 +438,7 @@
                 &:hover {
                     position: relative;
                     background: $foreground;
+                    padding-top: 10rem;
 
                     &:first-child {
                         background: url('/assets/guardians-bg.png') center/cover no-repeat;
@@ -469,6 +470,8 @@
 
                     img {
                         height: 20%;
+                        // position: absolute;
+                        // top: 2rem;
                         // position: absolute;
                         // opacity: .2;
                         // transform: scale(.3);
