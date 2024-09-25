@@ -86,8 +86,6 @@ export default function Home() {
         <h1>The sun will shine again for us</h1>
       </main>
 
-      <div className={style.separator}></div>
-
       <section
         ref={abstractRef}
         className={`${style.abstract} ${isAbstractVisible ? style.visible : ''}`}

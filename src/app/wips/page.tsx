@@ -79,7 +79,7 @@ export default function WipsPage() {
             <Header />
             <div className={style.title}>
                 <h1>WIPs</h1>
-                <hr />
+                {/* <hr /> */}
             </div>
 
             {/* Chamada de Masonry sem erros */}

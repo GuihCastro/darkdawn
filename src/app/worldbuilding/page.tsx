@@ -72,7 +72,7 @@ export default function WorldbuildingPage() {
             >
                 <div className={`${styles.text} ${isAboutVisible ? styles.visible : ''}`}>
                     <h2>About the project</h2>
-                    <hr />
+                    {/* <hr /> */}
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni iste velit voluptatibus illum, dolorum facilis doloribus non maxime aperiam sit soluta est molestiae aliquam explicabo perferendis eaque harum ipsum saepe.</p>
                     <br />
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque beatae expedita rerum vero natus, voluptates hic! Explicabo minima temporibus perferendis mollitia voluptate voluptates magni? Doloremque esse eum accusamus totam voluptas.</p>
@@ -93,7 +93,7 @@ export default function WorldbuildingPage() {
                 >
                     <div className={styles.title}>
                         <h2>Tales</h2>
-                        <hr />
+                        {/* <hr /> */}
                     </div>
                     <div className={styles.txts}>
                         <div>

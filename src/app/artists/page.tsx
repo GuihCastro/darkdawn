@@ -10,7 +10,7 @@ export default function ArtistsPage() {
             <div className={style.mari}>
                 <img src="/assets/mari.jpeg" alt="Avatar Mari Livraes" />
                 <h2>Mari Livraes</h2>
-                <hr />
+                {/* <hr /> */}
                 <p>Concept Artist with a special passion for Dark Fantasy themes. Having extensive experience working with various companies and projects, both in the national and international AAA market. Art and Character Design Instructor at ICS</p>
                 <br />
                 <span>
@@ -28,7 +28,7 @@ export default function ArtistsPage() {
             <div className={style.mike}>
                 <img src="/assets/mike.jpeg" alt="Avatar Mike Azevedo" />
                 <h2>Mike Azevedo</h2>
-                <hr />
+                {/* <hr /> */}
                 <p>Illustrator and Concept Artist born in Osasco, works with games and has had Riot Games / Valve / Blizzard / NCsoft / Tencent / Supercell / Guerrilla as clients. He enjoys making colorful and fun digital and traditional paintings, creator of MAR Studio and teacher at ICS since 2013.</p>
                 <br />
                 <span>

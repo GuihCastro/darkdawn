@@ -118,7 +118,7 @@ export default function GalleryPage() {
             <Header />
             <div className={style.title}>
                 <h1>Gallery</h1>
-                <hr />
+                {/* <hr /> */}
             </div>
 
             {/* Chamada de Masonry sem erros */}
