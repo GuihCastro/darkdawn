@@ -164,12 +164,13 @@
             transform: scale(0.5); // Inicia menor (do fundo)
             transform: translateY(10rem);
             transition: transform .3s ease-in-out, opacity .3s ease-in-out;
-    
+
             &.visible {
                 opacity: 1;
                 transform: scale(1); // Volta ao tamanho original
                 transform: translateY(0);
             }
+
             .title {
                 width: 100%;
                 display: flex;
@@ -183,6 +184,7 @@
                     font-size: 3rem;
                     font-weight: 600;
                     color: $gold;
+                    margin-bottom: 1rem;
                 }
 
                 hr {
@@ -198,6 +200,66 @@
                 gap: 3rem;
                 font-weight: 300;
                 text-align: justify;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 2rem .5rem 0;
+
+        .welcome {
+            h1 {
+                font-size: 3rem;
+                text-align: center;
+            }
+        }
+
+        .about {
+            height: auto;
+            flex-direction: column;
+            padding: 2rem;
+            gap: 2rem;
+            border-radius: 3rem 3rem 0 0;
+
+            .text {
+                width: 100%;
+                transform: none; // Remove o translateX em telas pequenas
+
+                h2 {
+                    font-size: 2rem; // Reduz o tamanho do título
+                }
+
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .char {
+                img {
+                    height: auto; // Permite que a imagem se ajuste naturalmente
+                    max-width: 100%; // Limita a largura em dispositivos pequenos
+                }
+            }
+        }
+
+        .tales {
+            height: auto;
+            padding: 2rem;
+
+            .content {
+                .title {
+                    h2 {
+                        font-size: 2rem; // Reduz o tamanho do título em dispositivos pequenos
+                    }
+                }
+
+                .txts {
+                    flex-direction: column; // Empilha os textos verticalmente em telas menores
+                    gap: 1.5rem;
+                    p {
+                        font-size: 1.5rem;
+                    }
+                }
             }
         }
     }

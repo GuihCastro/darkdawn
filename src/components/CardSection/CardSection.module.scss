@@ -29,7 +29,7 @@
             transform: translateY(0); // Move para a posição final
         }
     }
-    @media (max-width: 426px) {
+    @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
         align-items: center;

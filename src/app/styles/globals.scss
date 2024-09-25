@@ -109,6 +109,12 @@ html {
   /* 16px * 62.5% = 10px */
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 // $background: #181C14;
 // $foreground: #ECDFCC;
 // $secondary: #697565;
@@ -131,6 +137,7 @@ body {
   // font-weight: 100;
   font-size: 1.6rem;
   letter-spacing: .2rem;
+  overflow-x: hidden;
 }
 
 h1, h2 {

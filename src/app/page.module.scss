@@ -538,7 +538,7 @@
     }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 768px) {
     .container {
         // padding: 1rem;
         main {
@@ -601,8 +601,10 @@
 
         .factions {
             flex-direction: column;
+            justify-content: space-between;
             height: auto; // Ajustando a altura da seção para caber melhor em telas menores
-            padding: 1rem 0;
+            // padding: 1rem 0;
+            gap: 5rem;
 
             div {
                 padding: 2rem 1rem;
