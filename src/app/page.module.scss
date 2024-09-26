@@ -216,6 +216,7 @@
         position: relative;
         height: 100vh;
         width: 100%;
+        max-width: 1920px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -299,12 +300,12 @@
         position: relative;
         width: 100%;
         // max-width: 1920px;
-        height: 100vh;
+        // height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 15rem;
+        padding: 2rem;
         gap: 3rem;
         // background: url('/assets/bg-placeholder2.png') center/cover no-repeat;
         background: $foreground;
@@ -337,7 +338,7 @@
                 // position: absolute;
                 // left: 0;
                 // top: 0;
-                height: 70rem;
+                height: 60rem;
                 display: flex;
                 // justify-self: flex-start;
                 align-items: center;
@@ -371,7 +372,8 @@
             }
 
             .text {
-                width: 55%;
+                width: 50%;
+                text-align: left;
 
                 opacity: 0;
                 transform: translateX(15rem); // Começa fora da tela, do lado direito
@@ -387,12 +389,12 @@
                     width: 100%;
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
+                    align-items: flex-end;
                     justify-content: center;
                     margin-bottom: 5rem;
 
                     h2 {
-                        font-size: 3rem;
+                        font-size: 10rem;
                         font-weight: 800;
                         letter-spacing: .3rem;
                         text-transform: uppercase;
@@ -417,6 +419,7 @@
                     // font-size: 1.5rem;
                     color: $background;
                     font-weight: 400;
+                    text-align: justify;
                 }
             }
         }
