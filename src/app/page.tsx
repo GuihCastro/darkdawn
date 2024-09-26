@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import style from './page.module.scss';
 // import Header from '@/components/Header/Header';
 import CardSection from '@/components/CardSection/CardSection';
+import IntroBanner from '@/components/IntroBanner/IntroBanner';
 import HomeBanner from '@/components/HomeBanner/HomeBanner';
 import Footer from '@/components/Footer/Footer';
 
@@ -87,21 +88,21 @@ export default function Home() {
         <h1>The sun will shine again for us</h1>
       </main>
 
-      <section
+      <IntroBanner />
+
+      {/*<section
         ref={abstractRef}
         className={`${style.abstract} ${isAbstractVisible ? style.visible : ''}`}
       >
         <div className={style.info}>
           <div className={`${style.characters} ${isAbstractVisible ? style.visible : ''}`}>
             <img src="/assets/abstract1.png" alt="Sowilo" onContextMenu={preventContextMenu} />
-            {/* <img className={style.woman} src="/assets/abstract2.png" alt="Worker character" onContextMenu={preventContextMenu} /> */}
           </div>
           <div className={`${style.text} ${isAbstractVisible ? style.visible : ''}`}>
             <div className={style.title}>
               <h2>
                 <img src="/assets/logo.png" alt="DarkDawn logo" />
               </h2>
-              {/* <hr /> */}
               <h3>An art project by Mari Livraes and Mike Azevedo</h3>
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat natus quasi iure accusamus. Nisi voluptate magnam fugiat neque nobis quo nihil ipsum fugit facilis ut. Itaque dolorem quos sapiente harum!
@@ -110,7 +111,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </section>*/}
 
       <section
         ref={factionsRef}
