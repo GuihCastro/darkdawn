@@ -102,7 +102,7 @@ export default function WorldbuildingPage() {
                         <div>
                             <h3>Workers</h3>
                             <p>Day after day, night after night, masses of people move through the alleys, cross walkways and fill the factories, inhaling the toxic gas excreted by the machinery of which their own flesh is the raw material.
-                                Their movement is coordinated and follows a perfect rhythm in an endless flow. They enter, clock in, deposit their lives in the gears of some construct they don't even know what it is, clock out and return home, even more emptied than when they arrived. And they repeat the cycle as long as there is still some blood pumping in their veins, or until they are consumed and completely bewildered by the fog.
+                                Their movement is coordinated and follows a perfect rhythm in an endless flow. They enter, clock in, deposit their lives in the gears of some construct they don&apos;t even know what it is, clock out and return home, even more emptied than when they arrived. And they repeat the cycle as long as there is still some blood pumping in their veins, or until they are consumed and completely bewildered by the fog.
                             </p>
                             <br />
                             <p>When a gear breaks, it is discarded and replaced by another; no more, no less. Exactly like this is the (non)life cycle of Eclipse Corporation workers. Mere biological appendages of mechanical monstrosities, in a dead organism that insatiably feeds on life.</p>
@@ -123,7 +123,7 @@ export default function WorldbuildingPage() {
                         </div>
                         <div>
                             <h3>Overseer</h3>
-                            <p>The Inspectors are key pieces on the cogs of the titanic machinery of Eclipse Corp., even though they are as replaceable as the workers themselves. Overseeing the laborers, their role is to ensure that the work gets done and production doesn't halt, as well as to suppress the slightest sign of an uprising, in the least friendly manner possible. Though they may not realize it, they do belong to the same caste as those they control, never hesitating to employ complete brutality against their own kind in favor of the interests of the elite to which they aspire to belong.</p>
+                            <p>The Inspectors are key pieces on the cogs of the titanic machinery of Eclipse Corp., even though they are as replaceable as the workers themselves. Overseeing the laborers, their role is to ensure that the work gets done and production doesn&apos;t halt, as well as to suppress the slightest sign of an uprising, in the least friendly manner possible. Though they may not realize it, they do belong to the same caste as those they control, never hesitating to employ complete brutality against their own kind in favor of the interests of the elite to which they aspire to belong.</p>
                         </div>
                     </div>
                 </div>
