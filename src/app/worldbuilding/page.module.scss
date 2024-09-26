@@ -216,6 +216,8 @@
     }
 
     @media (max-width: 768px) {
+        max-width: 100vw;
+        overflow-x: hidden;
         padding: 2rem .5rem 0;
 
         .welcome {
@@ -237,7 +239,8 @@
                 transform: none; // Remove o translateX em telas pequenas
 
                 h2 {
-                    font-size: 2rem; // Reduz o tamanho do título
+                    font-size: 3rem;
+                    text-align: center; // Reduz o tamanho do título
                 }
 
                 p {
@@ -258,17 +261,29 @@
             padding: 2rem;
 
             .content {
+                width: 100%;
+                opacity: 1;
+                display: flex;
+                flex-direction: column;
                 .title {
+                    margin: 2rem 0;
                     h2 {
-                        font-size: 2rem; // Reduz o tamanho do título em dispositivos pequenos
+                        font-size: 3rem; // Reduz o tamanho do título em dispositivos pequenos
                     }
                 }
 
                 .txts {
+                    width: 100%;
                     flex-direction: column; // Empilha os textos verticalmente em telas menores
                     gap: 1.5rem;
-                    p {
-                        font-size: 1.5rem;
+                    div {
+                        width: 100%;
+                        h3 {
+                            font-size: 1.6rem;
+                        }
+                        p {
+                            font-size: 1.2rem;
+                        }
                     }
                 }
             }
