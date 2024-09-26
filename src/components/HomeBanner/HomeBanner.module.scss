@@ -44,4 +44,13 @@
             filter: brightness(1.5);
         }
     }
+
+    @media (max-width: 768px) {
+        h2 {
+            top: 1rem;
+            left: 1rem;
+            font-size: 3rem;
+            max-width: 90vw;
+        }
+    }
 }

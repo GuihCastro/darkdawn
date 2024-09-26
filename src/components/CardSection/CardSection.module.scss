@@ -97,9 +97,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 3rem 2rem;
         // grid-template-columns: 1fr; // Exibir em uma coluna apenas
         // grid-template-rows: repeat(4, 1fr); // Criar 4 linhas para os cards
-        gap: 2rem;
+        .content {
+            width: 100%;
+            flex-direction: column;
+            padding: 3rem 2rem;
+            gap: 2rem;
+        }
+        .card {
+            max-width: 90vw;
+        }
     }
 }

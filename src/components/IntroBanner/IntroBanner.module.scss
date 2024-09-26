@@ -71,7 +71,9 @@
             text-align: justify;
         }
     }
-
+    @media (max-width: 768px) {
+        display: none;
+    }
     // h2 {
     //     position: absolute;
     //     max-width: 70%;

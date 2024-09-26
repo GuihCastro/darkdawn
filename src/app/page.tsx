@@ -9,10 +9,10 @@ import HomeBanner from '@/components/HomeBanner/HomeBanner';
 import Footer from '@/components/Footer/Footer';
 
 export default function Home() {
-  // const [isAbstractVisible, setIsAbstractVisible] = useState(false);
+  const [isAbstractVisible, setIsAbstractVisible] = useState(false);
   const [isFactionsVisible, setIsFactionsVisible] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
-  // const abstractRef = useRef<HTMLDivElement>(null);
+  const abstractRef = useRef<HTMLDivElement>(null);
   const factionsRef = useRef<HTMLDivElement>(null);
 
   const preventContextMenu = (event: React.MouseEvent<HTMLImageElement>): void => {
@@ -29,29 +29,29 @@ export default function Home() {
   }, []);
 
   // Hook para animar a seção abstract
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       const entry = entries[0];
-  //       if (entry.isIntersecting) {
-  //         setIsAbstractVisible(true);
-  //         observer.disconnect();
-  //       }
-  //     },
-  //     {
-  //       threshold: 0.02,
-  //     }
-  //   );
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsAbstractVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.02,
+      }
+    );
 
-  //   const currentRef = abstractRef.current; // Copia para uma variável
-  //   if (currentRef) {
-  //     observer.observe(currentRef);
-  //   }
+    const currentRef = abstractRef.current; // Copia para uma variável
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
 
-  //   return () => {
-  //     if (currentRef) observer.unobserve(currentRef);
-  //   };
-  // }, []);
+    return () => {
+      if (currentRef) observer.unobserve(currentRef);
+    };
+  }, []);
 
   // Hook para animar a seção factions
   useEffect(() => {
@@ -90,7 +90,7 @@ export default function Home() {
 
       <IntroBanner />
 
-      {/*<section
+      <section
         ref={abstractRef}
         className={`${style.abstract} ${isAbstractVisible ? style.visible : ''}`}
       >
@@ -111,7 +111,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>*/}
+      </section>
 
       <section
         ref={factionsRef}
