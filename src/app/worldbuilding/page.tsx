@@ -73,11 +73,14 @@ export default function WorldbuildingPage() {
                 <div className={`${styles.text} ${isAboutVisible ? styles.visible : ''}`}>
                     <h2>About the project</h2>
                     {/* <hr /> */}
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni iste velit voluptatibus illum, dolorum facilis doloribus non maxime aperiam sit soluta est molestiae aliquam explicabo perferendis eaque harum ipsum saepe.</p>
+                    <p>The project was born in 2020, when Mari and Mike were classmates in João Paulo Bragato&apos;s Character Design course, and decided to come together for a collab.
+                    </p>
                     <br />
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque beatae expedita rerum vero natus, voluptates hic! Explicabo minima temporibus perferendis mollitia voluptate voluptates magni? Doloremque esse eum accusamus totam voluptas.</p>
+                    <p>The work together was so successful, and the ideas were so rich, that the project grew, and it was almost natural that it would be revisited and amplified now in 2024.
+                        The lore was deepened, new characters were born, others evolved and the universe expanded. In this new cycle, the world of Darkdawn seems so alive and pulsating that it is almost risky to inhale and be intoxicated by the evil fog that fills the city&apos;s streets and factories. The same streets and factories that are stage for the confrontation between the revolutionary Guardians of the Sun and the mysterious Eclipse Corp.
+                    </p>
                     <br />
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, voluptatibus consequatur repudiandae nam sint quibusdam et officia, fugiat esse vitae cupiditate vero nulla saepe autem. Quae sit quia dignissimos fuga!</p>
+                    <p>We invite everyone to sneak into these dark alleys and take their side in the battle for the sun of DarkDawn.</p>
                 </div>
                 <div className={`${styles.char} ${isAboutVisible ? styles.visible : ''}`}>
                     <img src="/assets/worldbuilding.png" alt="City landscape art" />
@@ -97,25 +100,30 @@ export default function WorldbuildingPage() {
                     </div>
                     <div className={styles.txts}>
                         <div>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque fuga harum voluptates eligendi nemo ut enim est amet perspiciatis corporis. Voluptas a omnis similique earum ea sint quo quos rerum?</p>
+                            <h3>Workers</h3>
+                            <p>Day after day, night after night, masses of people move through the alleys, cross walkways and fill the factories, inhaling the toxic gas excreted by the machinery of which their own flesh is the raw material.
+                                Their movement is coordinated and follows a perfect rhythm in an endless flow. They enter, clock in, deposit their lives in the gears of some construct they don't even know what it is, clock out and return home, even more emptied than when they arrived. And they repeat the cycle as long as there is still some blood pumping in their veins, or until they are consumed and completely bewildered by the fog.
+                            </p>
                             <br />
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam atque modi itaque commodi. Accusantium doloremque, officiis commodi amet asperiores laudantium architecto excepturi hic? Accusamus, cupiditate commodi. Sapiente rerum possimus sit.</p>
-                            <br />
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad magni in ex sed fugit quasi? Neque similique, delectus molestiae ex repudiandae nesciunt corporis optio, maxime tempore dolore veritatis dolorem nobis?</p>
+                            <p>When a gear breaks, it is discarded and replaced by another; no more, no less. Exactly like this is the (non)life cycle of Eclipse Corporation workers. Mere biological appendages of mechanical monstrosities, in a dead organism that insatiably feeds on life.</p>
                         </div>
                         <div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque distinctio eveniet eius molestias quisquam accusamus minus, cumque veritatis quia ea eum, optio dolore laboriosam alias ut nihil sapiente delectus? Repudiandae.</p>
+                            <h3>Tempo Priest</h3>
+                            <p>Ih the beats of the clock, infinite is the turning of time,
+                                yet finite is the life that runs towards demise.
+                                Something draws your attention,
+                                you fell attracted towards the pendulum of Smoke,
+                                sudenly you feel tired, tired and angry.
+                                There is no time to be a child in the darknes of the fog, as youth gives way yourself
+                                into another whell of the cog of the Dark Eclipse.</p>
                             <br />
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste temporibus ducimus, ipsam corrupti ex consectetur incidunt a rerum veritatis fugiat quis, facere id. Blanditiis reprehenderit iusto recusandae aliquid consectetur alias?</p>
-                            <br />
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rerum perferendis odio minus porro doloremque dicta cumque vero. Ex assumenda at asperiores dolor deleniti minima! Ab architecto eos consequatur magni.</p>
+                            <p>Lures with his pendulum,
+                                and accelerates time around himself,
+                                causing the children of the dark mist to grow old and more dangerous </p>
                         </div>
                         <div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ad exercitationem quod voluptatum cum, iste odit praesentium provident, architecto similique facere voluptate consequatur enim qui magni aperiam illo libero dolor?</p>
-                            <br />
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum eaque labore qui et id asperiores molestias temporibus commodi a sint ut dicta ea eligendi, sed provident iure, atque aperiam perspiciatis?</p>
-                            <br />
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aperiam cumque minus maxime, recusandae delectus maiores animi reiciendis deserunt perspiciatis id, ut facere voluptates aliquid quas odit sunt quasi quis.</p>
+                            <h3>Overseer</h3>
+                            <p>The Inspectors are key pieces on the cogs of the titanic machinery of Eclipse Corp., even though they are as replaceable as the workers themselves. Overseeing the laborers, their role is to ensure that the work gets done and production doesn't halt, as well as to suppress the slightest sign of an uprising, in the least friendly manner possible. Though they may not realize it, they do belong to the same caste as those they control, never hesitating to employ complete brutality against their own kind in favor of the interests of the elite to which they aspire to belong.</p>
                         </div>
                     </div>
                 </div>
