@@ -105,9 +105,10 @@ export default function Home() {
               </h2>
               <h3>An art project by Mari Livraes and Mike Azevedo</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat natus quasi iure accusamus. Nisi voluptate magnam fugiat neque nobis quo nihil ipsum fugit facilis ut. Itaque dolorem quos sapiente harum!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quidem neque nisi voluptatibus vitae deserunt, tempore blanditiis mollitia in quia ex nulla cum porro eum sed aliquid quis et repellat?
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse facilis sed reiciendis consectetur necessitatibus consequuntur temporibus odio officiis nemo error, in obcaecati cum iusto! At natus autem voluptatem earum. Accusamus?
+            <p>What to do when the city streets are taken over by a mystical haze that intoxicates, inebriates and transforms everyone around you?
+              Factories, buildings and colossal machines emerge from nowhere, and, from one moment to the next, all citizens become Kafkaesque workers at the service of the great Eclipse Corp.
+              It may seem like this is how things have always been and always will be, as if seeing the absurdity of this dystopia isn&apos;t even possible. But not for The Bright One.
+              For some reason, Sowilo was unaffected by the fog illusions. Managing to awaken some of their comrades, they form the Guardians of the Sun, a small and powerful revolutionary group determined to free the city from the Eclipse&apos;s tentacles.
             </p>
           </div>
         </div>
