@@ -48,7 +48,7 @@
         padding: 3rem;
         display: flex;
         justify-content: space-between;
-        background: $secondary;
+        background: $gray2;
         // grid-template-columns: repeat(2, 1fr);
         // grid-template-rows: repeat(2, 1fr);
         // place-items: center;
@@ -67,7 +67,7 @@
             height: 100%;
             background: inherit;
             /* Usa a mesma imagem do background */
-            filter: brightness(2);
+            filter: brightness(1.5);
             /* Reduz o brilho (simulando opacidade) */
             z-index: 0;
             // transition: filter 1s ease-out;
