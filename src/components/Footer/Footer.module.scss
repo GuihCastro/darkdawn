@@ -6,21 +6,23 @@
     align-items: center;
     justify-content: center;
     // border-top: 1px solid $gold;
-    background: $tertiary;
+    background: $gray1;
     .content {
         width: 100%;
         max-width: 1920px;
-        padding: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
+        // gap: 2rem;
         .links {
+            width: 100%;
+            padding: 1rem;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 20rem;
+            // background: $gray1;
             div {
                 display: flex;
                 flex-direction: column;
@@ -48,17 +50,20 @@
                 }
             }
         }
-        hr {
-            width: 70%;
-            border-color: $gold;
-            opacity: .8;
-        }
-        p {
-            text-align: center;
-            font-size: 1rem;
-            font-weight: 300;
-            &:first-child {
-                color: $yellow;
+        // hr {
+        //     width: 70%;
+        //     border-color: $gold;
+        //     opacity: .8;
+        // }
+        .copyright {
+            padding: 1rem 2rem 2rem;
+            p {
+                text-align: center;
+                font-size: 1rem;
+                font-weight: 300;
+                &:first-child {
+                    color: $yellow;
+                }
             }
         }
     }

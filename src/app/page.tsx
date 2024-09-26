@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import style from './page.module.scss';
 // import Header from '@/components/Header/Header';
 import CardSection from '@/components/CardSection/CardSection';
+import HomeBanner from '@/components/HomeBanner/HomeBanner';
 import Footer from '@/components/Footer/Footer';
 
 export default function Home() {
@@ -97,7 +98,9 @@ export default function Home() {
           </div>
           <div className={`${style.text} ${isAbstractVisible ? style.visible : ''}`}>
             <div className={style.title}>
-              <h2>Darkdawn</h2>
+              <h2>
+                <img src="/assets/logo.png" alt="DarkDawn logo" />
+              </h2>
               {/* <hr /> */}
               <h3>An art project by Mari Livraes and Mike Azevedo</h3>
             </div>
@@ -143,6 +146,8 @@ export default function Home() {
       </section>
 
       <CardSection />
+
+      <HomeBanner />
 
       <Footer />
     </div>

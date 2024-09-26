@@ -58,6 +58,23 @@
         transform: translateY(50px);
         transition: opacity 1s ease, transform 1s ease;
 
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            /* Usa a mesma imagem do background */
+            filter: brightness(2);
+            /* Reduz o brilho (simulando opacidade) */
+            z-index: 0;
+            // transition: filter 1s ease-out;
+            // opacity: 0;
+            /* Fica atrás do conteúdo */
+        }
+
         &.visible {
             opacity: 1;
             transform: translateY(0);

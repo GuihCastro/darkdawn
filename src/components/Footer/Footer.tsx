@@ -33,8 +33,8 @@ export default function Footer() {
                         </span>
                     </div>
                 </div>
-                <hr />
-                <div>
+                {/* <hr /> */}
+                <div className={style.copyright}>
                     <p>© 2024 DarkDawn. All rights reserved.</p>
                     <p>This website and its content, including but not limited to images, text, and design, are the intellectual property of Mariana Livraes and Mike Azevedo and are protected by applicable copyright and trademark laws. Unauthorized reproduction, distribution, or use is strictly prohibited.</p>
                 </div>

@@ -216,7 +216,7 @@
         position: relative;
         height: 100vh;
         width: 100%;
-        max-width: 1920px;
+        // max-width: 1920px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -299,7 +299,7 @@
     .abstract {
         position: relative;
         width: 100%;
-        // max-width: 1920px;
+        max-width: 1920px;
         // height: 100vh;
         display: flex;
         flex-direction: column;
@@ -429,7 +429,7 @@
         width: 100%;
         max-width: 1920px;
         height: 90vh;
-        // background: #ECDFCC30;
+        background: $tertiary;
         color: $tertiary;
         display: flex;
 
