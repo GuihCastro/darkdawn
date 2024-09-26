@@ -6,6 +6,16 @@
     width: 100%;
     max-width: 1920px;
     height: 100%;
+    .bg {
+        opacity: 0;
+        transition: opacity 1s ease-in-out 0.5s;
+        will-change: opacity;
+    
+        &.visible {
+            opacity: 1;
+        }
+    }
+
     .text {
         position: absolute;
         width: 40%;
@@ -14,6 +24,16 @@
         right: 10rem;
         // width: 50%;
         text-align: left;
+
+        opacity: 0;
+        transform: translateX(15rem); // Começa fora da tela, do lado direito
+        transition: transform 1s ease-in-out 0.5s, opacity 1s ease-in-out 0.5s;
+        will-change: opacity, transform;
+
+        &.visible {
+            transform: translateX(0); // Move para a posição final
+            opacity: 1;
+        }
 
         .title {
             // position: absolute;
@@ -51,6 +71,7 @@
             text-align: justify;
         }
     }
+
     // h2 {
     //     position: absolute;
     //     max-width: 70%;

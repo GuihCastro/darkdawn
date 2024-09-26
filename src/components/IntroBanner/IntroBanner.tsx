@@ -1,10 +1,46 @@
+"use client";
+
+import { useEffect, useRef, useState } from 'react';
 import style from './IntroBanner.module.scss';
 
 export default function IntroBanner() {
+    const [isAbstractVisible, setIsAbstractVisible] = useState(false);
+    const abstractRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const entry = entries[0];
+                if (entry.isIntersecting) {
+                    setIsAbstractVisible(true);
+                    observer.disconnect();
+                }
+            },
+            {
+                threshold: 0.02,
+            }
+        );
+
+        const currentRef = abstractRef.current; // Copia para uma variável
+        if (currentRef) {
+            observer.observe(currentRef);
+        }
+
+        return () => {
+            if (currentRef) observer.unobserve(currentRef);
+        };
+    }, []);
+
     return (
-        <div className={style.container}>
-            <img src="/assets/banner3.jpg" alt="Banner" />
-            <div className={style.text}>
+        <div
+            ref={abstractRef}
+            className={`${style.container} ${isAbstractVisible ? style.visible : ''}`}
+        >
+            <img
+                className={`${style.bg} ${isAbstractVisible ? style.visible : ''}`} 
+                src="/assets/banner3.jpg" alt="Banner" 
+            />
+            <div className={`${style.text} ${isAbstractVisible ? style.visible : ''}`}>
                 <div className={style.title}>
                     <h2>
                         <img src="/assets/logo.png" alt="DarkDawn logo" />
