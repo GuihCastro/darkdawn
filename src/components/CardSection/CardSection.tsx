@@ -58,17 +58,19 @@ export default function CardSection() {
     ];
 
     return (
-        <div className={`${style.container} ${isVisible ? style.visible : ''}`} ref={sectionRef}>
-            {cards.map((card, index) => (
-                <Link href={card.href} key={index}>
-                    <Card
-                        key={index}
-                        backgroundImage={card.backgroundImage}
-                        title={card.title}
-                        items={card.items}
-                    />
-                </Link>
-            ))}
-        </div>
+        <section className={`${style.container} ${isVisible ? style.visible : ''}`} ref={sectionRef}>
+            <div className={`${style.content} ${isVisible ? style.visible : ''}`}>
+                {cards.map((card, index) => (
+                    <Link href={card.href} key={index}>
+                        <Card
+                            key={index}
+                            backgroundImage={card.backgroundImage}
+                            title={card.title}
+                            items={card.items}
+                        />
+                    </Link>
+                ))}
+            </div>
+        </section>
     );
 }
