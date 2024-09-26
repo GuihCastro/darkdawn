@@ -12,7 +12,7 @@ export default function ArtistsPage() {
                 <h2>Mari Livraes</h2>
                 {/* <hr /> */}
                 <p>Concept Artist with a special passion for Dark Fantasy themes. Having extensive experience working with various companies and projects, both in the national and international AAA market. Art and Character Design Instructor at ICS</p>
-                <p>I believe that the artist's soul is freed when we can expand the connection between the artist's technique and interpretation, his worldview and his ideals.
+                <p>I believe that the artist&apos;s soul is freed when we can expand the connection between the artist&apos;s technique and interpretation, his worldview and his ideals.
                 In 2024 I gave myself the freedom to produce things that I feel are true and that I would like to bring to the world. This is my cry, which can echo beyond my existence.</p>
                 <br />
                 <span>
