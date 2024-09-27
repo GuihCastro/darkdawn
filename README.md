@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌑 DarkDawn
 
-## Getting Started
+DarkDawn é um projeto artístico e interativo que combina tecnologia web de ponta com o talento de artistas visuais. Este site é uma experiência imersiva que explora uma atmosfera visual única através de animações, design responsivo e interatividade.
 
-First, run the development server:
+## 🎨 Visão Geral
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+DarkDawn foi desenvolvido para ser um showcase tanto do trabalho artístico de **Mari Livraes** e **Mike Azevedo** quanto das minhas habilidades como desenvolvedor web, utilizando **React**, **NextJS**, **TypeScript**, **Sass** e outras tecnologias modernas para criar uma interface fluida e envolvente.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔗 Acesse o Projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Você pode explorar o site no ar aqui: **https://darkdawn.art/**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tecnologias Utilizadas
 
-## Learn More
+Este projeto foi construído utilizando as seguintes tecnologias:
 
-To learn more about Next.js, take a look at the following resources:
+- **[React](https://reactjs.org/)**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **[Next.js](https://nextjs.org/)**: Framework React para renderização do lado do servidor e otimização de performance.
+- **[TypeScript](https://www.typescriptlang.org/)**: Superset de JavaScript que adiciona tipagem estática.
+- **[Sass](https://sass-lang.com/)**: Pré-processador CSS para facilitar a manutenção do estilo.
+- **[Prettier](https://prettier.io/)** + **[ESLint](https://eslint.org/)**: Ferramentas para garantir a padronização do código e seguir boas práticas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Funcionalidades
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Responsividade Completa**: O site se adapta a diferentes tamanhos de tela, oferecendo uma ótima experiência em dispositivos móveis, tablets e desktops.
+- **Galeria Interativa**: Visualize as obras dos artistas em uma galeria com animações ao passar o mouse e modo de visualização em tela cheia.
+- **Navegação Dinâmica**: O conteúdo principal permanece visível mesmo durante a navegação entre diferentes áreas do site, mantendo a experiência contínua.
 
-## Deploy on Vercel
+## 🖼️ Captura de Tela
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![darkdawn-home](C:\Users\User\Documents\Programação\Projetos\DarkDawn\darkdawn\public\darkdawn-home.gif)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Desenvolvido por GuihCastro
