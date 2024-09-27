@@ -28,6 +28,6 @@ Este projeto foi construído utilizando as seguintes tecnologias:
 
 ## 🖼️ Captura de Tela
 
-![darkdawn-home](C:\Users\User\Documents\Programação\Projetos\DarkDawn\darkdawn\public\darkdawn-home.gif)
+![darkdawn-home](./public/darkdawn-home.gif)
 
 Desenvolvido por GuihCastro
