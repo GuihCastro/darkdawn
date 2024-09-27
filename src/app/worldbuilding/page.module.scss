@@ -70,7 +70,7 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        padding: 5rem 1rem;
+        padding: 3rem 1rem;
         background: $background;
         border-radius: 5rem 5rem 0 0;
         box-shadow: 0px -50px 53px 9px rgba(0, 0, 0, 0.80);
@@ -117,12 +117,6 @@
                 margin-bottom: 1rem;
             }
 
-            hr {
-                width: 70%;
-                border-color: $yellow;
-                margin-bottom: 2rem;
-            }
-
             p {
                 font-weight: 400;
                 text-align: justify;
@@ -152,7 +146,7 @@
     .tales {
         position: relative;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -161,6 +155,7 @@
         background: $background;
 
         .content {
+            height: 100%;
             opacity: 0;
             transform: scale(0.5); // Inicia menor (do fundo)
             transform: translateY(10rem);
@@ -182,33 +177,39 @@
                 // justify-self: flex-start;
                 h2 {
                     text-transform: uppercase;
-                    font-size: 5rem;
+                    font-size: 6rem;
                     font-weight: 600;
                     color: $gold;
-                    margin-bottom: 1rem;
-                }
-
-                hr {
-                    width: 70%;
-                    border-color: $yellow;
                     margin-bottom: 2rem;
                 }
             }
 
             .txts {
                 width: 100%;
+                height: 100%;
                 display: flex;
                 gap: 3rem;
                 font-weight: 300;
                 text-align: justify;
                 div {
                     width: 33%;
+                    // height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    // justify-content: space-between;
                     h3 {
                         text-transform: uppercase;
                         font-weight: 500;
                         font-size: 2rem;
                         color: $yellow;
                         text-align: center;
+                    }
+                    img {
+                        max-width: 90%;
+                        max-height: 50rem;
+                        margin: 2rem 0;
+                        justify-self: flex-end;
                     }
                 }
             }

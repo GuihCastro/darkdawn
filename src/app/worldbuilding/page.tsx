@@ -101,6 +101,7 @@ export default function WorldbuildingPage() {
                     <div className={styles.txts}>
                         <div>
                             <h3>Workers</h3>
+                            <img src="/assets/worker.png" alt="Worker Character" />
                             <p>Day after day, night after night, masses of people move through the alleys, cross walkways and fill the factories, inhaling the toxic gas excreted by the machinery of which their own flesh is the raw material.
                                 Their movement is coordinated and follows a perfect rhythm in an endless flow. They enter, clock in, deposit their lives in the gears of some construct they don&apos;t even know what it is, clock out and return home, even more emptied than when they arrived. And they repeat the cycle as long as there is still some blood pumping in their veins, or until they are consumed and completely bewildered by the fog.
                             </p>
@@ -109,6 +110,7 @@ export default function WorldbuildingPage() {
                         </div>
                         <div>
                             <h3>Tempo Priest</h3>
+                            <img src="/assets/priest.png" alt="Priest Character" />
                             <p>Ih the beats of the clock, infinite is the turning of time,
                                 yet finite is the life that runs towards demise.
                                 Something draws your attention,
@@ -123,6 +125,7 @@ export default function WorldbuildingPage() {
                         </div>
                         <div>
                             <h3>Overseer</h3>
+                            <img src="/assets/overseer.png" alt="Overseer Character" />
                             <p>The Inspectors are key pieces on the cogs of the titanic machinery of Eclipse Corp., even though they are as replaceable as the workers themselves. Overseeing the laborers, their role is to ensure that the work gets done and production doesn&apos;t halt, as well as to suppress the slightest sign of an uprising, in the least friendly manner possible. Though they may not realize it, they do belong to the same caste as those they control, never hesitating to employ complete brutality against their own kind in favor of the interests of the elite to which they aspire to belong.</p>
                         </div>
                     </div>
