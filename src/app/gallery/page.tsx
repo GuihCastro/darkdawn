@@ -6,22 +6,10 @@ import { useState, useEffect } from 'react';
 import Header from '@/components/Header/Header';
 import { Skeleton } from "@/components/ui/skeleton"
 import Modal from 'react-modal';
-// import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { GrPrevious, GrNext } from "react-icons/gr";
 import { IoClose } from "react-icons/io5";
 
-// Importação dinâmica correta para Masonry e ResponsiveMasonry
 const Masonry = dynamic(() => import('react-responsive-masonry'), { ssr: false });
-
-// const SkeletonPlaceholder = () => (
-//     <div className="flex flex-col space-y-3">
-//       <Skeleton className="h-[125px] w-[250px] rounded-xl" />
-//       <div className="space-y-2">
-//         <Skeleton className="h-4 w-[250px]" />
-//         <Skeleton className="h-4 w-[200px]" />
-//       </div>
-//     </div>
-// );
 
 export default function GalleryPage() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -33,7 +21,6 @@ export default function GalleryPage() {
     };
 
     useEffect(() => {
-        // Defina corretamente o appElement para evitar erro
         Modal.setAppElement('#__next');
     }, []);
 
@@ -84,7 +71,6 @@ export default function GalleryPage() {
 
     const closeModal = (): void => {
         setIsOpen(false);
-        // setCurrentImg('');
     };
 
     const goToNextImage = (): void => {
@@ -96,7 +82,6 @@ export default function GalleryPage() {
     };
 
     const handleImageLoad = (): void => {
-        // Verifica se todas as imagens foram carregadas
         setLoading(false);
     };
 
@@ -125,12 +110,9 @@ export default function GalleryPage() {
             <Header />
             <div className={style.title}>
                 <h1>Gallery</h1>
-                {/* <hr /> */}
             </div>
 
-            {/* Chamada de Masonry sem erros */}
             <Masonry
-                // columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
                 className={style.gallery}
                 columnsCount={4}
                 gutter="2rem"
@@ -146,14 +128,13 @@ export default function GalleryPage() {
                             src={image}
                             alt={`Gallery Image ${index + 1}`}
                             className={style.galleryImage}
-                            onLoad={handleImageLoad} // Define o estado de carregamento
-                            onContextMenu={preventContextMenu} // Impede o clique direito
+                            onLoad={handleImageLoad}
+                            onContextMenu={preventContextMenu}
                         />
                     </div>
                 ))}
             </Masonry>
 
-            {/* Modal para visualização das imagens em tela cheia */}
             <Modal
                 isOpen={isOpen}
                 onRequestClose={closeModal}
@@ -165,7 +146,7 @@ export default function GalleryPage() {
                     src={images[currentImgIndex]}
                     alt="Full View"
                     className={style.modalImage}
-                    onContextMenu={preventContextMenu} // Impede o clique direito
+                    onContextMenu={preventContextMenu}
                 />
                 <button onClick={closeModal} className={style.closeButton}>
                     <IoClose size={20} />
@@ -173,14 +154,12 @@ export default function GalleryPage() {
                 <button
                     className={`${style.prevBtn} ${currentImgIndex == 0 ? style.disable : ''}`}
                     onClick={goToPreviousImage}
-                // disabled={currentImgIndex == 0}
                 >
                     <GrPrevious size={50} />
                 </button>
                 <button
                     className={`${style.nextBtn} ${currentImgIndex == (images.length - 1) ? style.disable : ''}`}
                     onClick={goToNextImage}
-                // disabled={images.length <= 1}
                 >
                     <GrNext size={50} />
                 </button>

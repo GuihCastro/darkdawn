@@ -5,7 +5,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // border-top: 1px solid $gold;
     background: $gray1;
     .content {
         width: 100%;
@@ -14,7 +13,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        // gap: 2rem;
         .links {
             width: 100%;
             padding: 1rem;
@@ -22,7 +20,6 @@
             justify-content: center;
             align-items: center;
             gap: 20rem;
-            // background: $gray1;
             div {
                 display: flex;
                 flex-direction: column;
@@ -50,11 +47,6 @@
                 }
             }
         }
-        // hr {
-        //     width: 70%;
-        //     border-color: $gold;
-        //     opacity: .8;
-        // }
         .copyright {
             padding: 1rem 2rem 2rem;
             p {
@@ -74,33 +66,27 @@
             gap: 1.5rem;
 
             .links {
-                // flex-direction: column;
                 gap: 5rem;
 
                 div {
                     gap: 0.5rem;
 
                     h3 {
-                        font-size: 1.25rem; // Reduz o tamanho da fonte para dispositivos móveis
+                        font-size: 1.25rem;
                     }
 
                     span {
-                        // flex-direction: column; // Ajusta os links para uma coluna em telas menores
                         gap: 1.5rem;
 
                         a {
-                            font-size: 0.875rem; // Reduz o tamanho da fonte dos links
+                            font-size: 0.875rem; 
                         }
                     }
                 }
             }
 
-            hr {
-                width: 90%; // Aumenta o width do hr para preencher mais a tela
-            }
-
             p {
-                font-size: 0.875rem; // Reduz o tamanho do texto das parágrafos
+                font-size: 0.875rem;
             }
         }
     }

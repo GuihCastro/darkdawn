@@ -35,12 +35,6 @@
             margin-top: 2rem;
         }
 
-        hr {
-            width: 70%;
-            border-color: $gold;
-            margin-bottom: 2rem;
-        }
-
         p {
             text-align: justify;
             font-weight: 300;
@@ -72,29 +66,24 @@
 
         div {
             img {
-                width: 15rem; // Reduz o tamanho da imagem
+                width: 15rem; 
                 height: 15rem;
             }
 
             h2 {
-                font-size: 2rem; // Reduz o tamanho do título
+                font-size: 2rem; 
                 margin-top: 1rem;
             }
 
-            hr {
-                width: 90%; // Aumenta o width do hr para se adequar à tela menor
-            }
-
             p {
-                font-size: 1rem; // Reduz o tamanho do parágrafo para telas pequenas
+                font-size: 1rem; 
             }
 
             span {
-                // flex-direction: column; // Ajusta os links para serem empilhados verticalmente em telas menores
                 gap: 1rem;
 
                 a {
-                    font-size: 0.875rem; // Ajusta o tamanho dos links
+                    font-size: 0.875rem; 
                 }
             }
         }

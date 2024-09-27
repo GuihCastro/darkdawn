@@ -24,7 +24,7 @@ export default function WorldbuildingPage() {
             }
         );
 
-        const currentRef = aboutRef.current; // Copia para uma variável
+        const currentRef = aboutRef.current;
         if (currentRef) {
             observer.observe(currentRef);
         }
@@ -44,11 +44,11 @@ export default function WorldbuildingPage() {
                 }
             },
             {
-                threshold: 0.5,
+                threshold: 0.1,
             }
         );
 
-        const currentRef = talesRef.current; // Copia para uma variável
+        const currentRef = talesRef.current;
         if (currentRef) {
             observer.observe(currentRef);
         }
@@ -72,7 +72,6 @@ export default function WorldbuildingPage() {
             >
                 <div className={`${styles.text} ${isAboutVisible ? styles.visible : ''}`}>
                     <h2>About the project</h2>
-                    {/* <hr /> */}
                     <p>The project was born in 2020, when Mari and Mike were classmates in João Paulo Bragato&apos;s Character Design course, and decided to come together for a collab.
                     </p>
                     <br />
@@ -96,7 +95,6 @@ export default function WorldbuildingPage() {
                 >
                     <div className={styles.title}>
                         <h2>Tales</h2>
-                        {/* <hr /> */}
                     </div>
                     <div className={styles.txts}>
                         <div>

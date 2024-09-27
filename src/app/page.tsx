@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import style from './page.module.scss';
-// import Header from '@/components/Header/Header';
 import CardSection from '@/components/CardSection/CardSection';
 import IntroBanner from '@/components/IntroBanner/IntroBanner';
 import HomeBanner from '@/components/HomeBanner/HomeBanner';
@@ -20,15 +19,13 @@ export default function Home() {
   };
 
   useEffect(() => {
-    // Define um timeout que coincide com a duração da animação
     const timer = setTimeout(() => {
       setContentVisible(true);
-    }, 2900); // 3000ms é o tempo da animação text-flicker-in-glow
+    }, 2900);
 
-    return () => clearTimeout(timer); // Limpa o timer se o componente for desmontado
+    return () => clearTimeout(timer);
   }, []);
 
-  // Hook para animar a seção abstract
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -43,7 +40,7 @@ export default function Home() {
       }
     );
 
-    const currentRef = abstractRef.current; // Copia para uma variável
+    const currentRef = abstractRef.current; 
     if (currentRef) {
       observer.observe(currentRef);
     }
@@ -53,7 +50,6 @@ export default function Home() {
     };
   }, []);
 
-  // Hook para animar a seção factions
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -68,7 +64,7 @@ export default function Home() {
       }
     );
 
-    const currentRef = factionsRef.current; // Copia para uma variável
+    const currentRef = factionsRef.current;
     if (currentRef) {
       observer.observe(currentRef);
     }
@@ -81,7 +77,6 @@ export default function Home() {
   return (
     <div className={`${style.container} ${contentVisible ? style.fadeIn : ''}`}>
       <main className={contentVisible ? style.bgVisible : ''}>
-        {/* <Header contentVisible={contentVisible} /> */}
         <header className={`${contentVisible ? style.fadeIn : ''}`}>
           <img src="/assets/logo.png" alt="DarkDawn logo" />
         </header>

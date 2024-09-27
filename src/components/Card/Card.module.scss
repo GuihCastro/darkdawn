@@ -61,7 +61,6 @@
 
         &::before {
             transform: scale(1.2);
-            /* Aplica o zoom na imagem de fundo */
         }
 
         div {
@@ -82,26 +81,24 @@
 
         div {
             ul {
-                // flex-direction: column;
-                // align-items: center;
                 gap: 1rem;
 
                 li {
-                    font-size: 0.875rem; // Reduz o tamanho da fonte
+                    font-size: 0.875rem;
                 }
             }
 
             h2 {
-                font-size: 2rem; // Reduz o tamanho do título
+                font-size: 2rem;
             }
 
             span {
-                width: 7rem; // Ajusta o tamanho da barra
+                width: 7rem;
             }
         }
 
         &:hover div span {
-            width: 8rem; // Ajusta o tamanho da barra no hover
+            width: 8rem;
         }
     }
 }

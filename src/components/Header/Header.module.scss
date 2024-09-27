@@ -3,18 +3,16 @@
     top: 0;
     width: 100%;
     max-width: 1920px;
-    // display: flex;
     padding: 1rem 2rem;
     z-index: 999;
     opacity: 1;
-    transition: opacity 0.5s ease-in; // Ajuste o tempo e a função de tempo conforme necessário
+    transition: opacity 0.5s ease-in;
 
     &.fadeIn {
         opacity: 1;
     }
 
     a {
-        // width: 10%;
         transition: filter .2s;
         &:hover {
             filter: brightness(1.5);

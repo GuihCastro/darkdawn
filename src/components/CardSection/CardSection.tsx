@@ -19,7 +19,7 @@ export default function CardSection() {
                 }
             },
             {
-                threshold: 0.1, // Anima quando 10% da seção está visível
+                threshold: 0.1,
             }
         );
 
